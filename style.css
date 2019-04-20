@@ -22,10 +22,9 @@ ul {
 }
 
 footer {
-  background-color: #13162A;
+  background-color: #1f9bde;
   color: white;
   text-align: center;
-  background: linear-gradient(to bottom, #284E7A, #000 100%);
   padding: 20px 0;
   display: flex;
   flex-direction: column;
@@ -134,36 +133,41 @@ hr {
 
 #mainNav {
   background-color: #FFF;
-  height: 60px !important;
+  height: 4em !important;
   padding-bottom: 0px !important;
   padding-right: 0 !important;
   position: relative;
 }
 
-#mainNav img {
+#mainNav #containerDiv #logoCMS {
   height: 42px;
   width: 102px;
+  transform: translateY(-10px);
 }
 
 #navbarResponsive {
-  min-height: 60px;
-  transform: translateY(-0.5em);
+  min-height: 65px;
+  transform: translateY(-0.65em);
   border-top-left-radius: 0;
+  padding-right: 130px;
   border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-bottom-right-radius: 20px; */
 }
 
 #solicitarVisita {
-  transform: translateY(-0.5em);
+  transform: translateY(-0.65em);
   height: 60px;
+  width: 150px;
   border-bottom-left-radius: 20px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #solicitarVisita p {
   position: absolute;
   bottom: -10px;
-  right: 2px;
+  right: 18px;
 }
 
 #secondaryNav {
@@ -176,9 +180,8 @@ hr {
   display: flex;
   flex-direction: row;
   height: 80px;
-  margin: 0 10px !important;
-  padding: 0 !important;
-  width: 95%;
+  margin: 0px auto !important;
+  width: 80%;
 }
 
 #secondaryNav .centered div {
@@ -189,9 +192,12 @@ hr {
   transition: all .25s;
 }
 
+#secondaryNav .centered div a{
+  text-decoration: none;
+}
+
 #secondaryNav .centered div img {
-  height: 40px;
-  width: 40px;
+  transform: scaleX(0.65) scaleY(0.65);
 }
 
 #secondaryNav .centered div p {
