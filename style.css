@@ -192,6 +192,11 @@ hr {
   transition: all .25s;
 }
 
+#secondaryNav .centered a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #secondaryNav .centered div a{
   text-decoration: none;
 }
@@ -208,6 +213,13 @@ hr {
   z-index: 999;
   background-color: white;
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
+}
+
+#carousel-photos{
+  height: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .image-area {
