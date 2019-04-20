@@ -107,6 +107,7 @@ hr {
 }
 
 .nav ul li {
+  font-size: 1.4em !important;
   text-align: right;
   list-style-type: none;
   display: inline;
@@ -120,7 +121,7 @@ hr {
 
 .nav ul li a:hover {
   text-decoration: underline;
-  color: #CCC !important;
+  color: black !important;
 }
 
 .bg-cms {
@@ -143,21 +144,21 @@ hr {
   height: 42px;
   width: 102px;
   transform: translateY(-10px);
+  margin-right: 10px;
 }
 
 #navbarResponsive {
-  min-height: 65px;
+  min-height: 4.85em;
   transform: translateY(-0.65em);
   border-top-left-radius: 0;
-  padding-right: 130px;
+  padding-right: 170px;
   border-bottom-left-radius: 20px;
-  /* border-bottom-right-radius: 20px; */
 }
 
 #solicitarVisita {
   transform: translateY(-0.65em);
-  height: 60px;
-  width: 150px;
+  height: 4.55em;
+  width: 180px;
   border-bottom-left-radius: 20px;
   position: absolute;
   top: 0;
@@ -165,6 +166,7 @@ hr {
 }
 
 #solicitarVisita p {
+  font-size: 1.2em;
   position: absolute;
   bottom: -10px;
   right: 18px;
@@ -202,7 +204,9 @@ hr {
 }
 
 #secondaryNav .centered div img {
-  transform: scaleX(0.65) scaleY(0.65);
+  /* transform: scaleX(0.65) scaleY(0.65); */
+  height: 39px;
+  padding-bottom: 12px;
 }
 
 #secondaryNav .centered div p {
