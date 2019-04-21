@@ -156,17 +156,51 @@ hr {
   transform: translateY(-0.65em);
   border-top-left-radius: 0;
   padding-right: 170px;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 15px;
+}
+
+#navbarResponsive:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: inherit;
+    border-radius: inherit;
+    transform-origin: bottom right;
+    -ms-transform: skew(10deg, 0deg);
+    -webkit-transform: skew(10deg, 0deg);
+    transform: skew(10deg, 0deg);
 }
 
 #solicitarVisita {
   transform: translateY(-0.65em);
   height: 4.55em;
   width: 180px;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 15px;
   position: absolute;
   top: 0;
   right: 0;
+}
+
+#solicitarVisita:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: inherit;
+    border-radius: inherit;
+    transform-origin: bottom right;
+    -ms-transform: skew(10deg, 0deg);
+    -webkit-transform: skew(10deg, 0deg);
+    transform: skew(10deg, 0deg);
 }
 
 #solicitarVisita p {
