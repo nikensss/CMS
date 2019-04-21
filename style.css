@@ -142,7 +142,7 @@ hr {
 
 #mainNav {
   background-color: #FFF;
-  height: 4em !important;
+  min-height: 4em !important;
   padding-bottom: 0px !important;
   padding-right: 0 !important;
   position: relative;
@@ -249,7 +249,7 @@ hr {
 
 #secondaryNavResponsive ul li div p {
   color: #1f9bde;
-  font-size: 1.2em !important;
+  font-size: 0.9em !important;
   padding: 0 8px;
 }
 
