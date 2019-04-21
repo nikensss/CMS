@@ -12,6 +12,14 @@
   <link href="style.css" rel="stylesheet">
   <!-- <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"> -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <!-- <script>
+    $("#anchorContacte").click(function() {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#infoContacte").offset().top
+      }, 2000);
+    });
+    </script> -->
   <title>Centre Mèdic Sabadell</title>
 </head>
 
@@ -19,8 +27,7 @@
   <nav class="navbar navbar-expand-md navbar-dark shadow" id="mainNav">
     <div class="nav container-fluid ml-0 mr-0 pr-0" style="position: relative;" id="containerDiv">
       <img class="pr-2 width-10" src="images/logo-menu.png" alt="Centre Mèdic Sabadell" id=logoCMS>
-      <button class="navbar-toggler navbar-toggler-right bg-cms" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponse" aria-expanded="false" aria-label="Toggle navigation" id="menuButton"><i
-          class="fa fa-bars"></i></button>
+      <button class="navbar-toggler navbar-toggler-right bg-cms" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponse" aria-expanded="false" aria-label="Toggle navigation" id="menuButton"><i class="fa fa-bars"></i></button>
       <div class="collapse navbar-collapse nav-item width-70 bg-cms text-left" id="navbarResponsive">
         <ul class="navbar-nav ml-auto mr-4 mt-4">
           <li class="nav-item"><a href="#" class="navbar-brand mr-1 js-scroll-trigger">El centre</a></li>
@@ -37,28 +44,43 @@
     </div><!-- END container-fluid -->
   </nav><!-- END mainNac -->
   <nav id="secondaryNav" class="bg-cms-light ml-a">
-    <div class="centered">
-      <a data-toggle="collapse" data-target="#collapseEspecialitats">
-        <div><img src="images/navbarSecondary/especialitats.png" /><br />
-          <p>Especialitats</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm centered">
+          <a data-toggle="collapse" data-target="#collapseEspecialitats">
+            <div><img src="images/navbarSecondary/especialitats.png" /><br />
+              <p>Especialitats</p>
+            </div>
+          </a>
         </div>
-      </a>
-      <div><img src="images/navbarSecondary/quadre-medic.png" /><br />
-        <p>Quadre mèdic</p>
-      </div>
-      <div><img src="images/navbarSecondary/mutues.png" /><br />
-        <p>Mutues</p>
-      </div>
-      <div><img src="images/navbarSecondary/unitat-estetica.png" /><br />
-        <p>Unitat estètica</p>
-      </div>
-      <a href="http://www.centremedicsabadell.net/">
-        <div><img src="images/navbarSecondary/solicitar-visites.png" /><br />
-          <p>Sol·licitar visites</p>
+        <div class="col-sm centered">
+          <div><img src="images/navbarSecondary/quadre-medic.png" /><br />
+            <p>Quadre mèdic</p>
+          </div>
         </div>
-      </a>
-      <div><img src="images/navbarSecondary/contacte.png" /><br />
-        <p>Contacte</p>
+        <div class="col-sm centered">
+          <div><img src="images/navbarSecondary/mutues.png" /><br />
+            <p>Mutues</p>
+          </div>
+        </div>
+        <div class="col-sm centered">
+          <div><img src="images/navbarSecondary/unitat-estetica.png" /><br />
+            <p>Unitat estètica</p>
+          </div>
+        </div>
+        <div class="col-sm centered">
+          <a href="http://www.centremedicsabadell.net/">
+            <div><img src="images/navbarSecondary/solicitar-visites.png" /><br />
+              <p>Sol·licitar visites</p>
+            </div>
+          </a></div>
+        <div class="col-sm centered">
+          <a href="#infoContacte" id="anchorContacte" class="js-scroll-trigger">
+            <div><img src="images/navbarSecondary/contacte.png" /><br />
+              <p>Contacte</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -70,19 +92,19 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" id="carousel-photos">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="First slide">
+        <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Second slide">
+        <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Fourth slide">
+        <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Fifth slide">
+        <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Sixth slide">
+        <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -95,6 +117,28 @@
     </a>
   </div>
   <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm p-a m-a">
+          <img class="bg-light br-5 p-2" src="images/logo-menu.png" alt="Logo CMS">
+        </div>
+        <div class="col-sm">
+          <p class="text-left-align" id="infoContacte">
+            <h4>Informació de Contacte:</h4>
+            <br>
+            Carrer de Parre Sallarès
+            <br>
+            08201, Sabadell
+            <br>
+            <strong>93 726 55 00</strong>
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- <ul>
       <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
       <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
