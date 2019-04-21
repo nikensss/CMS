@@ -106,7 +106,7 @@ hr {
   width: 80%;
 }
 
-.nav ul li {
+#navbarResponsive ul li {
   font-size: 1.4em !important;
   text-align: right;
   list-style-type: none;
@@ -114,12 +114,12 @@ hr {
   padding: 0;
 }
 
-#mainNav.nav ul li:not(:first-child):before {
+#navbarResponsive ul li:not(:first-child):before {
   color: white;
   content: " | ";
 }
 
-.nav ul li a:hover {
+#navbarResponsive ul li a:hover {
   text-decoration: underline;
   color: black !important;
 }
@@ -249,7 +249,7 @@ hr {
 
 #secondaryNavResponsive ul li div p {
   color: #1f9bde;
-  font-size: 0.8em !important;
+  font-size: 1.2em !important;
   padding: 0 8px;
 }
 
