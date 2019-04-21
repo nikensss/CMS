@@ -114,7 +114,7 @@ hr {
   padding: 0;
 }
 
-.nav ul li:not(:first-child):before {
+#mainNav.nav ul li:not(:first-child):before {
   color: white;
   content: " | ";
 }
@@ -130,6 +130,10 @@ hr {
 
 .bg-cms-light {
   background-color: #8bc7ea;
+}
+
+.text-cms-light{
+  color: #8bc7ea;
 }
 
 .br-5{
@@ -216,7 +220,7 @@ hr {
   padding: 0 !important;
 }
 
-#secondaryNav .centered {
+#secondaryNavResponsive {
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -224,7 +228,7 @@ hr {
   width: 10%;
 }
 
-#secondaryNav .centered div {
+#secondaryNavResponsive ul li div {
   min-width: 140px;
   height: 80px;
   padding-top: 10px;
@@ -232,26 +236,24 @@ hr {
   transition: all .25s;
 }
 
-#secondaryNav .centered a{
+#secondaryNavResponsive ul li div a{
   text-decoration: none;
   cursor: pointer;
 }
 
-#secondaryNav .centered div a{
-  text-decoration: none;
-}
-
-#secondaryNav .centered div img {
+#secondaryNavResponsive ul li div img {
   /* transform: scaleX(0.65) scaleY(0.65); */
   height: 39px;
   padding-bottom: 12px;
 }
 
-#secondaryNav .centered div p {
+#secondaryNavResponsive ul li div p {
   color: #1f9bde;
+  font-size: 0.8em !important;
+  padding: 0 8px;
 }
 
-#secondaryNav .centered button{
+#secondaryNavResponsive ul li div button{
   background: none;
 	color: inherit;
 	border: none;
@@ -261,7 +263,7 @@ hr {
 	outline: inherit;
 }
 
-#secondaryNav .centered button:active{
+#secondaryNavResponsive ul li div button:active{
   background: none;
 	color: inherit;
 	border: none;
@@ -271,14 +273,14 @@ hr {
 	outline: inherit;
 }
 
-#secondaryNav .centered div:hover {
+#secondaryNavResponsive ul li div.highlight-on-hover:hover {
   z-index: 999;
   background-color: white;
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
 }
 
 #carousel-photos{
-  height: 500px;
+  max-height: 500px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
