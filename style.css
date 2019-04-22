@@ -9,7 +9,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding: 0px;
   margin: 0px;
-  line-height: 1.5;
   background-color: #D2D2D2;
 }
 
@@ -207,8 +206,8 @@ hr {
 #solicitarVisita p {
   font-size: 1.2em;
   position: absolute;
-  bottom: -15px;
-  right: 18px;
+  bottom: -0.8em;
+  right: 1em;
 }
 
 #navbarSupportedContent ul li div {
@@ -224,16 +223,11 @@ hr {
   cursor: pointer;
 }
 
-#navbarSupportedContent ul li div img {
-  /* transform: scaleX(0.65) scaleY(0.65); */
-  min-height: 39px;
-  padding-bottom: 12px;
-}
 
 #navbarSupportedContent ul li div p {
   color: #1f9bde;
   font-size: 0.9em !important;
-  padding: 0 8px;
+  padding: 0 0.6em;
 }
 
 #navbarSupportedContent ul li div button {
@@ -259,7 +253,7 @@ hr {
 #navbarSupportedContent ul li div.highlight-on-hover:hover {
   /* z-index: 999; */
   background-color: white;
-  box-shadow: 0 0 11px rgba(33, 33, 33, .5);
+  box-shadow: 0 0 0.9em rgba(33, 33, 33, .5);
 }
 
 #carousel-photos {
@@ -269,78 +263,18 @@ hr {
   background-size: cover;
 }
 
-.image-area {
-  background-position: center center;
-  background-image: url('images/secondService.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 100px;
+.specialty-name{
+  border-top: 1px solid cadetblue;
+  border-bottom: 1px solid cadetblue;
+  background: rgba(139, 199, 234, 0.3);
+  font-weight: bold;
 }
 
-.centered-container {
-  margin: 0px auto;
-  padding: 10px 16px;
+.specialty-doctor::before{
+  content: "· ";
+  padding-left: 1em;
 }
 
-.single-service {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.single-service img {
-  width: 80%;
-  border-radius: 12px;
-}
-
-.single-service p {
-  padding: 0 16px;
-  margin: 0 34px;
-  font-size: 0.8em;
-}
-
-.overlayed{
-  z-index: 1000;
-}
-
-h3.title {
-  color: #131633;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  text-align: center;
-  width: 100%;
-}
-
-#about {
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-#twoCols {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-img img {
-  width: 120px;
-  border: 3px solid #284EDA;
-  border-radius: 50%;
-}
-
-.about-bio {
-  font-size: 1.3em;
-  width: 90%;
-  max-width: 800px;
-  line-height: 2;
-  text-align: center;
-}
-
-/* #menuButton{
-  position: absolute;
-  top: 0px;
-  right: 28px;
-} */
 @media (max-width: 991px) {
   #mainTitle {
     font-size: 3em;
