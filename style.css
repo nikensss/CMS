@@ -132,11 +132,11 @@ hr {
   background-color: #8bc7ea;
 }
 
-.text-cms-light{
+.text-cms-light {
   color: #8bc7ea;
 }
 
-.br-5{
+.br-5 {
   border-radius: 5px;
 }
 
@@ -164,20 +164,20 @@ hr {
 }
 
 #navbarResponsive:after {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: inherit;
-    border-radius: inherit;
-    transform-origin: bottom right;
-    -ms-transform: skew(10deg, 0deg);
-    -webkit-transform: skew(10deg, 0deg);
-    transform: skew(10deg, 0deg);
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: inherit;
+  border-radius: inherit;
+  transform-origin: bottom right;
+  -ms-transform: skew(10deg, 0deg);
+  -webkit-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
 }
 
 #solicitarVisita {
@@ -191,20 +191,20 @@ hr {
 }
 
 #solicitarVisita:after {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: inherit;
-    border-radius: inherit;
-    transform-origin: bottom right;
-    -ms-transform: skew(10deg, 0deg);
-    -webkit-transform: skew(10deg, 0deg);
-    transform: skew(10deg, 0deg);
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: inherit;
+  border-radius: inherit;
+  transform-origin: bottom right;
+  -ms-transform: skew(10deg, 0deg);
+  -webkit-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
 }
 
 #solicitarVisita p {
@@ -215,7 +215,7 @@ hr {
 }
 
 #secondaryNav {
-  height: 90px;
+  height: 3.9em;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -223,27 +223,26 @@ hr {
 #secondaryNavResponsive {
   display: flex;
   flex-direction: row;
-  height: 80px;
+  height: 3.6em;
   margin: 0px auto !important;
-  width: 10%;
 }
 
 #secondaryNavResponsive ul li div {
   min-width: 140px;
-  height: 80px;
-  padding-top: 10px;
   text-align: center;
+  padding-top: 0.2em;
   transition: all .25s;
+  transform: translateY(0.5em);
 }
 
-#secondaryNavResponsive ul li div a{
+#secondaryNavResponsive ul li div a {
   text-decoration: none;
   cursor: pointer;
 }
 
 #secondaryNavResponsive ul li div img {
   /* transform: scaleX(0.65) scaleY(0.65); */
-  height: 39px;
+  min-height: 39px;
   padding-bottom: 12px;
 }
 
@@ -253,24 +252,24 @@ hr {
   padding: 0 8px;
 }
 
-#secondaryNavResponsive ul li div button{
+#secondaryNavResponsive ul li div button {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-#secondaryNavResponsive ul li div button:active{
+#secondaryNavResponsive ul li div button:active {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 #secondaryNavResponsive ul li div.highlight-on-hover:hover {
@@ -279,7 +278,7 @@ hr {
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
 }
 
-#carousel-photos{
+#carousel-photos {
   max-height: 500px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -354,13 +353,9 @@ h3.title {
   top: 0px;
   right: 28px;
 } */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #mainTitle {
     font-size: 3em;
-  }
-
-  #containerDiv {
-    margin-right: 10px !important;
   }
 
   .intro-text {
@@ -368,10 +363,28 @@ h3.title {
   }
 
   #navbarResponsive {
-    width: 50%;
+    width: 100%;
     min-height: 0;
-    border-top-left-radius: 20px;
-    transform: translateY(-0.15em);
+    padding-right: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: transparent;
+  }
+
+  #navbarResponsive ul li a{
+    color: #8bc7ea;
+    text-decoration: none;
+  }
+
+  #navbarResponsive:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  #navbarResponsive ul li:not(:first-child):before {
+    color: white;
+    content: "";
   }
 
   footer ul {
