@@ -142,15 +142,12 @@ hr {
 
 #mainNav {
   background-color: #FFF;
-  min-height: 4em !important;
   padding-bottom: 0px !important;
   padding-right: 0 !important;
   position: relative;
 }
 
 #mainNav #containerDiv #logoCMS {
-  height: 42px;
-  width: 102px;
   transform: translateY(-10px);
   margin-right: 10px;
 }
@@ -214,17 +211,10 @@ hr {
   right: 18px;
 }
 
-#secondaryNav {
-  height: 3.9em;
-  margin: 0 !important;
-  padding: 0 !important;
-}
 
 #secondaryNavResponsive {
   display: flex;
   flex-direction: row;
-  height: 3.6em;
-  margin: 0px auto !important;
 }
 
 #secondaryNavResponsive ul li div {
@@ -273,7 +263,7 @@ hr {
 }
 
 #secondaryNavResponsive ul li div.highlight-on-hover:hover {
-  z-index: 999;
+  /* z-index: 999; */
   background-color: white;
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
 }
@@ -312,6 +302,10 @@ hr {
   padding: 0 16px;
   margin: 0 34px;
   font-size: 0.8em;
+}
+
+.overlayed{
+  z-index: 1000;
 }
 
 h3.title {
@@ -360,6 +354,19 @@ h3.title {
 
   .intro-text {
     font-size: 1.4em;
+  }
+
+  #secondary-nav{
+    min-height: 0;
+  }
+
+  #secondaryNavResponsive{
+    width: 100%;
+    min-height: 0;
+    padding-right: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: transparent;
   }
 
   #navbarResponsive {
