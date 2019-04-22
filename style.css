@@ -211,13 +211,7 @@ hr {
   right: 18px;
 }
 
-
-#secondaryNavResponsive {
-  display: flex;
-  flex-direction: row;
-}
-
-#secondaryNavResponsive ul li div {
+#navbarSupportedContent ul li div {
   min-width: 140px;
   text-align: center;
   padding-top: 0.2em;
@@ -225,24 +219,24 @@ hr {
   transform: translateY(0.5em);
 }
 
-#secondaryNavResponsive ul li div a {
+#navbarSupportedContent ul li a {
   text-decoration: none;
   cursor: pointer;
 }
 
-#secondaryNavResponsive ul li div img {
+#navbarSupportedContent ul li div img {
   /* transform: scaleX(0.65) scaleY(0.65); */
   min-height: 39px;
   padding-bottom: 12px;
 }
 
-#secondaryNavResponsive ul li div p {
+#navbarSupportedContent ul li div p {
   color: #1f9bde;
   font-size: 0.9em !important;
   padding: 0 8px;
 }
 
-#secondaryNavResponsive ul li div button {
+#navbarSupportedContent ul li div button {
   background: none;
   color: inherit;
   border: none;
@@ -252,7 +246,7 @@ hr {
   outline: inherit;
 }
 
-#secondaryNavResponsive ul li div button:active {
+#navbarSupportedContent ul li div button:active {
   background: none;
   color: inherit;
   border: none;
@@ -262,7 +256,7 @@ hr {
   outline: inherit;
 }
 
-#secondaryNavResponsive ul li div.highlight-on-hover:hover {
+#navbarSupportedContent ul li div.highlight-on-hover:hover {
   /* z-index: 999; */
   background-color: white;
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
@@ -347,7 +341,7 @@ h3.title {
   top: 0px;
   right: 28px;
 } */
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #mainTitle {
     font-size: 3em;
   }
