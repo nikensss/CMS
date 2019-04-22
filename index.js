@@ -16,7 +16,7 @@ function getEspecialitats() {
 }
 
 async function getResponseJSON(htmlElement) {
-	var interval = setInterval(loadingData.bind(null, $(htmlElement)), 250);
+	var interval = setInterval(loadingData.bind(null, $(htmlElement)), 125);
 	const response = await $.getJSON(wordnikApiRequest())
 		.complete(function (data) {
 			console.log("Complete!");
@@ -29,7 +29,7 @@ async function getResponseJSON(htmlElement) {
 function loadingData(htmlElement) {
 	var htmlString = $(htmlElement).html();
 	var dots = htmlString.replace("Carregant", "");
-	if (dots.length % 4 >= 3) {
+	if (dots.length >= 3) {
 		htmlString = "Carregant";
 	} else {
 		htmlString += ".";

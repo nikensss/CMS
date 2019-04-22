@@ -105,24 +105,6 @@ hr {
   width: 80%;
 }
 
-#navbarResponsive ul li {
-  font-size: 1.4em !important;
-  text-align: right;
-  list-style-type: none;
-  display: inline;
-  padding: 0;
-}
-
-#navbarResponsive ul li:not(:first-child):before {
-  color: white;
-  content: " | ";
-}
-
-#navbarResponsive ul li a:hover {
-  text-decoration: underline;
-  color: black !important;
-}
-
 .bg-cms {
   background-color: #1f9bde;
 }
@@ -144,6 +126,7 @@ hr {
   padding-bottom: 0px !important;
   padding-right: 0 !important;
   position: relative;
+  z-index: 999;
 }
 
 #mainNav #containerDiv #logoCMS {
@@ -174,6 +157,24 @@ hr {
   -ms-transform: skew(10deg, 0deg);
   -webkit-transform: skew(10deg, 0deg);
   transform: skew(10deg, 0deg);
+}
+
+#navbarResponsive ul li {
+  font-size: 1.4em !important;
+  text-align: right;
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+}
+
+#navbarResponsive ul li:not(:first-child):before {
+  color: white;
+  content: " | ";
+}
+
+#navbarResponsive ul li a:hover {
+  text-decoration: underline;
+  color: black !important;
 }
 
 #solicitarVisita {
@@ -208,6 +209,11 @@ hr {
   position: absolute;
   bottom: -0.8em;
   right: 1em;
+}
+
+#secondaryNav{
+  position: relative;
+  z-index: 998;
 }
 
 #navbarSupportedContent ul li div {
