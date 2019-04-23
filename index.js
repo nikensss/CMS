@@ -1,6 +1,4 @@
 function getEspecialitats() {
-
-
 	console.log("Getting especialitats");
 	const collapseEspecialitats = document.getElementById("collapseEspecialitats");
 	const bodyEspecialitats = document.getElementById("bodyEspecialitats");
@@ -43,11 +41,7 @@ function addFormattedData(targetElement, data) {
 		for (let j in data[i]) {
 			s += `<h5 class="specialty-name">${j}</h5>`;
 			if (Array.isArray(data[i][j])) {
-				s += "<ul>";
-				for (let k = 0; k < data[i][j].length; k++) {
-					s += `<li class="specialty-doctor">${data[i][j][k]}</li>`;
-				}
-				s += "</ul>";
+				s += arrayAsUnorderedList(data[i][j]);
 			} else {
 				s += `<p class="specialty-doctor">${data[i][j]}</p>`;
 			}
@@ -55,6 +49,17 @@ function addFormattedData(targetElement, data) {
 		s += "<hr>";
 	}
 	$(targetElement).html(s);
+}
+
+function arrayAsUnorderedList(array) {
+	let s = "";
+	s += "<ul>";
+	for (let k = 0; k < array.length; k++) {
+		s += `<li class="specialty-doctor">${array[k]}</li>`;
+	}
+	s += "</ul>";
+
+	return s;
 }
 
 function wordnikApiRequest() {
