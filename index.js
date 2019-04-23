@@ -72,7 +72,7 @@ function apiRequest() {
 }
 
 function construitxml(nNombre1, nNombre2) {
-	var f = createDummyForm();
+	const f = createDummyForm();
 
 	var requete;
 	requete = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"><soap:Body>";
@@ -86,15 +86,15 @@ function construitxml(nNombre1, nNombre2) {
 	requete = requete + "</nNombre2>";
 
 	requete = requete + "</soap:Body></soap:Envelope>";
-	xmlInput.value = requete;
-	actionInput.value = "urn:Webservice_CMS/Addition";
+	f.xmlInput.value = requete;
+	f.actionInput.value = "urn:Webservice_CMS/Addition";
 	document.body.appendChild(f);
-	
+
 	f.submit();
 }
 
 function createDummyForm(){
-	document.createElement("form");
+	const f = document.createElement("form");
 	f.setAttribute('action', "http://dell2900/CENTREMEDIC_WSTEST_WEB/awws/Webservice_CMS.awws");
 	f.setAttribute('method', "post");
 	f.setAttribute('name', "xmlform");
@@ -114,5 +114,8 @@ function createDummyForm(){
 	f.appendChild(xmlInput);
 	f.appendChild(actionInput);
 
+	f.xmlInput = xmlInput;
+	f.actionInput = actionInput;
+	
 	return f;
 }
