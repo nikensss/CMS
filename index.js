@@ -71,21 +71,69 @@ function apiRequest() {
 	return `${url}happy/${mode}?${data}`;
 }
 
+function webServiceCall() {
+	// 1. Create a new XMLHttpRequest object
+	let xhr = new XMLHttpRequest();
+
+	// 2. Configure it: GET-request for the URL /article/.../load
+	xhr.open('POST', "urn:Webservice_CMS");
+
+	// 3. Send the request over the network
+	var r = "<soap:Envelope " +
+		"xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope/\" " +
+		"xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" " +
+		"xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\">" +
+		"<soap:Body>";
+	r += '<m:Addition xmlns:m="urn:Webservice_CMS/Addition">';
+	r += "<nNombre1 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">3</nNombre1>";
+	r += "<nNombre2 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">4</nNombre2>";
+	r += '</m:Addition>';
+
+	r += "</soap:Body></soap:Envelope>";
+	xhr.send(r);
+
+	// 4. This will be called after the response is received
+	xhr.onload = function () {
+		if (xhr.status != 200) { // analyze HTTP status of the response
+			alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+		} else { // show the result
+			alert(`Done, got ${xhr.response.length} bytes`); // responseText is the server
+		}
+	};
+
+	xhr.onprogress = function (event) {
+		if (event.lengthComputable) {
+			alert(`Received ${event.loaded} of ${event.total} bytes`);
+		} else {
+			alert(`Received ${event.loaded} bytes`); // no Content-Length
+		}
+
+	};
+
+	xhr.onerror = function () {
+		alert("Request failed");
+	};
+}
+
 function construitxml(nNombre1, nNombre2) {
 	const f = createDummyForm();
 
 	var requete;
-	requete = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"><soap:Body>";
+	requete = "<soap:Envelope " +
+		"xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope/\" " +
+		"xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" " +
+		"xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\">" +
+		"<soap:Body>";
 
-	requete = requete + "<nNombre1 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">";
-	requete = requete + nNombre1;
-	requete = requete + "</nNombre1>";
+	requete += "<nNombre1 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">";
+	requete += nNombre1;
+	requete += "</nNombre1>";
 
-	requete = requete + "<nNombre2 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">";
-	requete = requete + nNombre2;
-	requete = requete + "</nNombre2>";
+	requete += "<nNombre2 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">";
+	requete += nNombre2;
+	requete += "</nNombre2>";
 
-	requete = requete + "</soap:Body></soap:Envelope>";
+	requete += "</soap:Body></soap:Envelope>";
 	f.xmlInput.value = requete;
 	f.actionInput.value = "urn:Webservice_CMS/Addition";
 	document.body.appendChild(f);
@@ -93,7 +141,7 @@ function construitxml(nNombre1, nNombre2) {
 	f.submit();
 }
 
-function createDummyForm(){
+function createDummyForm() {
 	const f = document.createElement("form");
 	f.setAttribute('action', "http://dell2900/CENTREMEDIC_WSTEST_WEB/awws/Webservice_CMS.awws");
 	f.setAttribute('method', "post");
@@ -116,6 +164,6 @@ function createDummyForm(){
 
 	f.xmlInput = xmlInput;
 	f.actionInput = actionInput;
-	
+
 	return f;
 }
