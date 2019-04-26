@@ -29,6 +29,7 @@ footer {
   flex-direction: column;
   align-items: center;
   clear: both;
+  z-index: 10;
 }
 
 footer p {
@@ -199,9 +200,9 @@ hr {
   background: inherit;
   border-radius: inherit;
   transform-origin: bottom right;
-  -ms-transform: skew(10deg, 0deg);
-  -webkit-transform: skew(10deg, 0deg);
-  transform: skew(10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
 }
 
 #solicitarVisita p {
@@ -211,7 +212,7 @@ hr {
   right: 1em;
 }
 
-#secondaryNav{
+#secondaryNav {
   position: relative;
   z-index: 998;
 }
@@ -257,7 +258,6 @@ hr {
 }
 
 #navbarSupportedContent ul li div.highlight-on-hover:hover {
-  /* z-index: 999; */
   background-color: white;
   box-shadow: 0 0 0.9em rgba(33, 33, 33, .5);
 }
@@ -269,16 +269,56 @@ hr {
   background-size: cover;
 }
 
-.specialty-name{
+.specialty-name {
   border-top: 1px solid cadetblue;
   border-bottom: 1px solid cadetblue;
   background: rgba(139, 199, 234, 0.3);
   font-weight: bold;
 }
 
-.specialty-doctor::before{
+.specialty-doctor::before {
   content: "· ";
   padding-left: 1em;
+}
+
+#body-wrapper {
+  position: relative;
+  z-index: 9;
+}
+
+#body-wrapper #block-collaboration-cliniques{
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+  width: 12em;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9;
+}
+
+#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-title{
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  height: 3em;
+  padding: 0.4em 0 0 0.5em;
+}
+
+#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-images{
+  height: 0;
+  position: relative;
+  bottom: 0;
+  transform: scaleY(0);
+  transition: all ease-in-out 0.5s;
+}
+
+#body-wrapper #block-collaboration-cliniques:hover{
+  bottom: 0em;
+}
+
+#body-wrapper #block-collaboration-cliniques:hover #collaboration-cliniques-images{
+  height: 5em;
+  transform: scaleY(1);
 }
 
 @media (max-width: 991px) {
@@ -290,11 +330,11 @@ hr {
     font-size: 1.4em;
   }
 
-  #secondary-nav{
+  #secondary-nav {
     min-height: 0;
   }
 
-  #secondaryNavResponsive{
+  #secondaryNavResponsive {
     width: 100%;
     min-height: 0;
     padding-right: 0;
@@ -312,7 +352,7 @@ hr {
     background: transparent;
   }
 
-  #navbarResponsive ul li a{
+  #navbarResponsive ul li a {
     color: #8bc7ea;
     text-decoration: none;
   }

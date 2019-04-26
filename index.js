@@ -84,7 +84,7 @@ function requestEspecialitats() {
 		i.setAttribute('id', 'response');
 		i.setAttribute('name', 'response');
 		i.setAttribute('style', 'display:block;');
-		i.setAttribute('src', 'https://centremedicsabadell.com');
+		i.setAttribute('src', 'http://servamed1.com/pcsc_web/L45/page_frontal_demanavisita.awp');
 		bodyEspecialitats.appendChild(i);
 	}
 }
