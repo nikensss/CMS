@@ -10,17 +10,19 @@ function getEspecialitats() {
 		$("#bodyEspecialitats").html("Carregant");
 		getResponseJSON("#bodyEspecialitats");
 	}
-
 }
 
 async function getResponseJSON(htmlElement) {
 	var interval = setInterval(loadingData.bind(null, $(htmlElement)), 125);
 	const response = await $.getJSON(apiRequest())
-		.complete(function (data) {
+		.complete(function(data) {
 			console.log("Complete!");
 			clearInterval(interval);
 			addFormattedData(htmlElement, data.responseJSON);
 			// $(htmlElement).data('is-loaded', true);
+		})
+		.error(function(e) {
+			console.error(e);
 		});
 }
 
@@ -71,83 +73,77 @@ function apiRequest() {
 	return `${url}happy/${mode}?${data}`;
 }
 
-function webServiceCall() {
-	// 1. Create a new XMLHttpRequest object
-	let xhr = new XMLHttpRequest();
+function requestEspecialitats() {
 
-	// 2. Configure it: GET-request for the URL /article/.../load
-	xhr.open('POST', "urn:Webservice_CMS");
+	var r = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"><soap:Body></soap:Body></soap:Envelope>";
+	var urn = "urn:Webservice_20/GetEspecialitats";
 
-	// 3. Send the request over the network
-	var r = "<soap:Envelope " +
-		"xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope/\" " +
-		"xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" " +
-		"xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\">" +
-		"<soap:Body>";
-	r += '<m:Addition xmlns:m="urn:Webservice_CMS/Addition">';
-	r += "<nNombre1 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">3</nNombre1>";
-	r += "<nNombre2 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">4</nNombre2>";
-	r += '</m:Addition>';
+	let fd = new FormData();
+	fd.append('xml', r);
+	fd.append('action', urn);
 
-	r += "</soap:Body></soap:Envelope>";
-	xhr.send(r);
-
-	// 4. This will be called after the response is received
-	xhr.onload = function () {
-		if (xhr.status != 200) { // analyze HTTP status of the response
-			alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
-		} else { // show the result
-			alert(`Done, got ${xhr.response.length} bytes`); // responseText is the server
-		}
-	};
-
-	xhr.onprogress = function (event) {
-		if (event.lengthComputable) {
-			alert(`Received ${event.loaded} of ${event.total} bytes`);
-		} else {
-			alert(`Received ${event.loaded} bytes`); // no Content-Length
-		}
-
-	};
-
-	xhr.onerror = function () {
-		alert("Request failed");
-	};
+	fetch('http://www.centremedicsabadell.net/WEBSERVICE_20_WEB/awws/Webservice_20.awws', {
+			method: 'POST',
+			body: fd
+		})
+		.then(r => r.text())
+		.then(console.log);
 }
 
-function construitxml(nNombre1, nNombre2) {
-	const f = createDummyForm();
-
-	var requete;
-	requete = "<soap:Envelope " +
-		"xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope/\" " +
-		"xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" " +
-		"xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\">" +
-		"<soap:Body>";
-
-	requete += "<nNombre1 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">";
-	requete += nNombre1;
-	requete += "</nNombre1>";
-
-	requete += "<nNombre2 xsd:type=\"xsd:int\" xmlns=\"urn:Webservice_CMS\">";
-	requete += nNombre2;
-	requete += "</nNombre2>";
-
-	requete += "</soap:Body></soap:Envelope>";
-	f.xmlInput.value = requete;
-	f.actionInput.value = "urn:Webservice_CMS/Addition";
+function submitOnDummyForm(r, urn) {
+	const {
+		f,
+		i
+	} = createDummyForm();
+	f.xmlInput.value = r;
+	f.actionInput.value = urn;
 	document.body.appendChild(f);
+	document.body.appendChild(i);
 
-	f.submit();
+	// $("#xmlform").submit(function(e) {
+	// 	var postData = $(this).serializeArray();
+	// 	console.log(`Seralized data: `);
+	// 	console.log(postData);
+	// 	var formURL = $(this).attr("action");
+	// 	console.log(`URL: ${formURL}`);
+	// 	$.ajax({
+	// 		url: formURL,
+	// 		type: "POST",
+	// 		data: postData,
+	// 		success: function(data) {
+	// 			//data: return data from server
+	// 			console.log("Success");
+	// 		}
+	//
+	// 	});
+	// 	e.preventDefault(); //STOP default action
+	// });
+	//
+	// $("#xmlform").submit();
+	// f.submit();
+
+	var formData = document.getElementById("xmlform");
+	var request = new XMLHttpRequest();
+	request.open("POST", formData.getAttribute("action"));
+	request.send(new FormData(formData));
+
+	// document.body.removeChild(f);
+	// document.body.removeChild(i);
 }
 
 function createDummyForm() {
+	const i = document.createElement("iframe");
+	i.setAttribute('id', 'response');
+	i.setAttribute('name', 'response');
+	i.setAttribute('style', 'display:none;');
+
 	const f = document.createElement("form");
-	f.setAttribute('action', "http://dell2900/CENTREMEDIC_WSTEST_WEB/awws/Webservice_CMS.awws");
+	// f.setAttribute('action', "http://192.168.1.131/WEBSERVICE_21_WEB/awws/Webservice_21.awws");
+	f.setAttribute('action', "http://www.centremedicsabadell.net/WEBSERVICE_20_WEB/awws/Webservice_20.awws");
 	f.setAttribute('method', "post");
 	f.setAttribute('name', "xmlform");
 	f.setAttribute('id', "xmlform");
-	f.setAttribute('target', "_self");
+	f.setAttribute('target', "response");
 
 	var xmlInput = document.createElement("input"); //input element, text
 	xmlInput.setAttribute('type', "hidden");
@@ -165,5 +161,45 @@ function createDummyForm() {
 	f.xmlInput = xmlInput;
 	f.actionInput = actionInput;
 
-	return f;
+	return {
+		f: f,
+		i: i
+	};
+}
+
+function webServiceCallBuildingXmlHttpRequest() {
+	// 1. Create a new XMLHttpRequest object
+	let xhr = new XMLHttpRequest();
+
+	// 2. Configure it: GET-request for the URL /article/.../load
+	xhr.open('POST', "http://www.centremedicsabadell.net/WEBSERVICE_20_WEB/awws/Webservice_20.awws", true);
+
+	// 3. Send the request over the network
+	var urn = "urn:Webservice_20/GetEspecialitats";
+	var r = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"><soap:Body><GetEspecialitats xmlns=\"" + urn + "\"/></soap:Body></soap:Envelope>";
+
+	// 4. This will be called after the response is received
+	xhr.onload = function() {
+		if (xhr.status != 200) { // analyze HTTP status of the response
+			alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+		} else { // show the result
+			alert(`Done, got ${xhr.response.length} bytes`); // responseText is the server
+		}
+	};
+
+	xhr.onprogress = function(event) {
+		if (event.lengthComputable) {
+			alert(`Received ${event.loaded} of ${event.total} bytes`);
+		} else {
+			alert(`Received ${event.loaded} bytes`); // no Content-Length
+		}
+
+	};
+
+	xhr.onerror = function() {
+		alert("Request failed");
+	};
+
+	xhr.send(r);
+
 }
