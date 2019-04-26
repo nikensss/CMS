@@ -1,27 +1,27 @@
-function getEspecialitats() {
-	console.log("Getting especialitats");
-	const collapseEspecialitats = document.getElementById("collapseEspecialitats");
-	const bodyEspecialitats = document.getElementById("bodyEspecialitats");
-	const isLoaded = $("#bodyEspecialitats").data('is-loaded');
-	console.log(`Is loaded? ${isLoaded}`);
+// function getEspecialitats() {
+// 	console.log("Getting especialitats");
+// 	const collapseEspecialitats = document.getElementById("collapseEspecialitats");
+// 	const bodyEspecialitats = document.getElementById("bodyEspecialitats");
+// 	const isLoaded = $("#bodyEspecialitats").data('is-loaded');
+// 	console.log(`Is loaded? ${isLoaded}`);
 
-	if (!collapseEspecialitats.classList.contains("show") && !isLoaded) {
-		console.log("Querying data...");
-		$("#bodyEspecialitats").html("Carregant");
-		getResponseJSON("#bodyEspecialitats");
-	}
-}
+// 	if (!collapseEspecialitats.classList.contains("show") && !isLoaded) {
+// 		console.log("Querying data...");
+// 		$("#bodyEspecialitats").html("Carregant");
+// 		getResponseJSON("#bodyEspecialitats");
+// 	}
+// }
 
 async function getResponseJSON(htmlElement) {
 	var interval = setInterval(loadingData.bind(null, $(htmlElement)), 125);
 	const response = await $.getJSON(apiRequest())
-		.complete(function(data) {
+		.complete(function (data) {
 			console.log("Complete!");
 			clearInterval(interval);
 			addFormattedData(htmlElement, data.responseJSON);
 			// $(htmlElement).data('is-loaded', true);
 		})
-		.error(function(e) {
+		.error(function (e) {
 			console.error(e);
 		});
 }
@@ -74,20 +74,25 @@ function apiRequest() {
 }
 
 function requestEspecialitats() {
+	const collapseEspecialitats = document.getElementById("collapseEspecialitats");
+	const bodyEspecialitats = document.getElementById("bodyEspecialitats");
 
-	var r = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"><soap:Body></soap:Body></soap:Envelope>";
-	var urn = "urn:Webservice_20/GetEspecialitats";
+	if (!collapseEspecialitats.classList.contains("show")) {
+		console.log("Mostrant especialitats!");
+		removeChildren(bodyEspecialitats);
+		const i = document.createElement("iframe");
+		i.setAttribute('id', 'response');
+		i.setAttribute('name', 'response');
+		i.setAttribute('style', 'display:block;');
+		i.setAttribute('src', 'https://centremedicsabadell.com');
+		bodyEspecialitats.appendChild(i);
+	}
+}
 
-	let fd = new FormData();
-	fd.append('xml', r);
-	fd.append('action', urn);
-
-	fetch('http://www.centremedicsabadell.net/WEBSERVICE_20_WEB/awws/Webservice_20.awws', {
-			method: 'POST',
-			body: fd
-		})
-		.then(r => r.text())
-		.then(console.log);
+function removeChildren(htmlElement) {
+	while (htmlElement.firstChild) {
+		htmlElement.removeChild(htmlElement.firstChild);
+	}
 }
 
 function submitOnDummyForm(r, urn) {
@@ -98,37 +103,10 @@ function submitOnDummyForm(r, urn) {
 	f.xmlInput.value = r;
 	f.actionInput.value = urn;
 	document.body.appendChild(f);
-	document.body.appendChild(i);
+	document.getElementById("bodyEspecialitats").appendChild(i);
 
-	// $("#xmlform").submit(function(e) {
-	// 	var postData = $(this).serializeArray();
-	// 	console.log(`Seralized data: `);
-	// 	console.log(postData);
-	// 	var formURL = $(this).attr("action");
-	// 	console.log(`URL: ${formURL}`);
-	// 	$.ajax({
-	// 		url: formURL,
-	// 		type: "POST",
-	// 		data: postData,
-	// 		success: function(data) {
-	// 			//data: return data from server
-	// 			console.log("Success");
-	// 		}
-	//
-	// 	});
-	// 	e.preventDefault(); //STOP default action
-	// });
-	//
-	// $("#xmlform").submit();
-	// f.submit();
-
-	var formData = document.getElementById("xmlform");
-	var request = new XMLHttpRequest();
-	request.open("POST", formData.getAttribute("action"));
-	request.send(new FormData(formData));
-
-	// document.body.removeChild(f);
-	// document.body.removeChild(i);
+	f.submit();
+	i.setAttribute("style", "display: block;");
 }
 
 function createDummyForm() {
@@ -165,41 +143,4 @@ function createDummyForm() {
 		f: f,
 		i: i
 	};
-}
-
-function webServiceCallBuildingXmlHttpRequest() {
-	// 1. Create a new XMLHttpRequest object
-	let xhr = new XMLHttpRequest();
-
-	// 2. Configure it: GET-request for the URL /article/.../load
-	xhr.open('POST', "http://www.centremedicsabadell.net/WEBSERVICE_20_WEB/awws/Webservice_20.awws", true);
-
-	// 3. Send the request over the network
-	var urn = "urn:Webservice_20/GetEspecialitats";
-	var r = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"><soap:Body><GetEspecialitats xmlns=\"" + urn + "\"/></soap:Body></soap:Envelope>";
-
-	// 4. This will be called after the response is received
-	xhr.onload = function() {
-		if (xhr.status != 200) { // analyze HTTP status of the response
-			alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
-		} else { // show the result
-			alert(`Done, got ${xhr.response.length} bytes`); // responseText is the server
-		}
-	};
-
-	xhr.onprogress = function(event) {
-		if (event.lengthComputable) {
-			alert(`Received ${event.loaded} of ${event.total} bytes`);
-		} else {
-			alert(`Received ${event.loaded} bytes`); // no Content-Length
-		}
-
-	};
-
-	xhr.onerror = function() {
-		alert("Request failed");
-	};
-
-	xhr.send(r);
-
 }
