@@ -200,9 +200,9 @@ hr {
   background: inherit;
   border-radius: inherit;
   transform-origin: bottom right;
-  -ms-transform: skew(-10deg, 0deg);
-  -webkit-transform: skew(-10deg, 0deg);
-  transform: skew(-10deg, 0deg);
+  -ms-transform: skew(10deg, 0deg);
+  -webkit-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
 }
 
 #solicitarVisita p {
