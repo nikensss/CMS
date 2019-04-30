@@ -317,7 +317,7 @@ hr {
 }
 
 #body-wrapper #block-collaboration-cliniques:hover #collaboration-cliniques-images{
-  height: 5em;
+  height: 15em;
   transform: scaleY(1);
 }
 
