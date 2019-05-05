@@ -20,40 +20,6 @@ ul {
   list-style: none;
 }
 
-footer {
-  background-color: #1f9bde;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  clear: both;
-  z-index: 10;
-}
-
-footer p {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 10px;
-}
-
-footer ul {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-}
-
-footer ul li {
-  margin: 0 8px;
-}
-
-footer ul li a {
-  font-size: 1.4em;
-  cursor: pointer;
-}
-
 hr {
   width: 33%;
   height: 2px;
@@ -133,6 +99,7 @@ hr {
 #mainNav #containerDiv #logoCMS {
   transform: translateY(-10px);
   margin-right: 10px;
+  margin-top: 5px;
 }
 
 #navbarResponsive {
@@ -286,39 +253,90 @@ hr {
   z-index: 9;
 }
 
-#body-wrapper #block-collaboration-cliniques{
+#body-wrapper #block-collaboration-cliniques {
   position: absolute;
   bottom: 0;
   right: 1em;
-  width: 12em;
+  width: 18em;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   transition: all ease-in-out 0.5s;
   z-index: 9;
+  text-align: center;
 }
 
-#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-title{
+#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-title {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  height: 3em;
-  padding: 0.4em 0 0 0.5em;
+  height: 2em;
+  font-size: 1.3em;
+  padding-top: 1em;
 }
 
-#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-images{
-  height: 0;
+#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-separator {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-images {
   position: relative;
   bottom: 0;
+  height: 0;
   transform: scaleY(0);
-  transition: all ease-in-out 0.5s;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out 0.15s;
 }
 
-#body-wrapper #block-collaboration-cliniques:hover{
-  bottom: 0em;
+#body-wrapper #block-collaboration-cliniques #collaboration-cliniques-images img {
+  margin: 1em 0;
 }
 
-#body-wrapper #block-collaboration-cliniques:hover #collaboration-cliniques-images{
-  height: 15em;
+
+#body-wrapper #block-collaboration-cliniques:hover #collaboration-cliniques-images {
+  height: 15.7em;
   transform: scaleY(1);
+  transition: height 0.3s ease-in-out, transform 0.3s ease-in-out 0.15s;
+}
+
+footer {
+  background-color: #1f9bde;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clear: both;
+  z-index: 10;
+}
+
+footer p {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+footer ul {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul li {
+  margin: 0 8px;
+}
+
+footer a {
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+footer a:hover {
+  color: black;
+  transform: scale(1.2);
 }
 
 @media (max-width: 991px) {
