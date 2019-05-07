@@ -24,161 +24,164 @@
 </head>
 
 <body id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-dark shadow" id="mainNav">
-    <div class="nav container-fluid ml-0 mr-0 pr-0" id="containerDiv">
-      <img class="pr-4 width-10" src="images/logo-menu.png" alt="Centre Mèdic Sabadell" id=logoCMS>
-      <button class="navbar-toggler navbar-toggler-right bg-cms mr-3" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponse" aria-expanded="false"
-        aria-label="Toggle navigation" id="menuButton"><i class="fa fa-bars"></i></button>
-      <div class="collapse navbar-collapse nav-item width-70 bg-cms text-left" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto mr-4 mt-4">
-          <li class="nav-item"><a href="#" class="navbar-brand mr-1 js-scroll-trigger">El centre</a></li>
-          <li class="nav-item"><a href="#" class="navbar-brand mr-1">Filosofia</a></li>
-          <li class="nav-item"><a href="#" class="navbar-brand mr-1 js-scroll-trigger">Noticies</a></li>
-          <li class="nav-item"><a href="https://centremedicsabadell.net/centremedic" class="navbar-brand mr-1">Area de
-              Gestió</a></li>
-        </ul>
-      </div><!-- END navbarResponsive -->
-      <div class="pr-0 mt-0 width-15 text-left d-none d-lg-block bg-cms-light" id="solicitarVisita">
-        <p>
-          <span class="text-muted">Sol·licitar visita:</span><br /> <strong>93 726 55 00</strong>
-        </p>
-      </div><!-- END solicitarVisita -->
-    </div><!-- END container-fluid -->
-  </nav><!-- END mainNav -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="secondaryNav">
-    <button class="text-cms-light bg-cms ml-2 mt-2 navbar-toggler" type="button" data-toggle="collapse"
-      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a data-toggle="collapse" data-target="#collapseEspecialitats" onclick="requestEspecialitats();">
-            <div class="nav-item">
-              <i class="text-cms-light fas fa-stethoscope fa-2x"></i><br />
-              <p>Especialitats</p>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item">
-          <div class="nav-item">
-            <i class="text-cms-light fas fa-user-nurse fa-2x"></i><br />
-            <p>Quadre mèdic</p>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <div class="nav-item">
-            <i class="text-cms-light far fa-building fa-2x"></i><br />
-            <p>Mutues</p>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="nav-item">
-            <i class="text-cms-light fas fa-adjust fa-2x"></i><br />
-            <p>Unitat estètica</p>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="http://www.centremedicsabadell.net/">
-            <div class="nav-item">
-              <i class="text-cms-light far fa-clipboard fa-2x"></i><br />
-              <p>Sol·licitar visites</p>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item">
-          <div class="nav-item">
-            <a href="#infoContacte" id="anchorContacte" class="js-scroll-trigger">
-              <i class="text-cms-light fas fa-phone fa-2x"></i><br />
-              <p>Contacte</p>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="collapse" id="collapseEspecialitats">
-    <div class="card card-body" data-is-loaded="false" id="bodyEspecialitats">
-    </div>
-  </div>
-  <div class="wrapper" id="body-wrapper">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" id="carousel-photos">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Slide">
-        </div>
-      </div>
-    </div>
-    <div id="block-collaboration-cliniques" class="bg-cms-light">
-      <div id="collaboration-cliniques-title" class="bg-cms">
-        <p>Clíniques <strong>col·laboradores</strong></p>
-        
-      </div>
-      <hr id="collaboration-cliniques-separator">
-      <div id="collaboration-cliniques-images">
-        <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png" alt="Sanident Associats"
-          class="logo_standard" style="width: 15em;">
-        <img class=" preload-me"
-          src="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg"
-          srcset="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w, https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w"
-          style="width: 15em;" alt="Clinica VisionLaser">
-        <img src="http://www.grupduran.com/wp-content/uploads/2018/12/logo-3.png" alt="Grup Duran" class="normal-logo"
-          style="width: 15em;">
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-        </div>
-        <div class="col-sm p-a m-a">
-          <img class="bg-light br-5 p-2" src="images/logo-menu.png" alt="Logo CMS">
-        </div>
-        <div class="col-sm">
-          <p class="text-left-align" id="infoContacte">
-            <h4 class="text-muted">Informació de Contacte:</h4>
-            <br>
-            <a href="https://goo.gl/maps/K65LNsJTPHKqen846">
-              <div>
-                Carrer de Parre Sallarès, 8
-                <br>
-                08201, Sabadell
+  <div class="container-fluid m-0 p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" id="mainNav">
+      <div class="nav container-fluid ml-0 mr-0 pr-0" id="containerDiv">
+        <img class="pr-4 width-10" src="images/logo-menu.png" alt="Centre Mèdic Sabadell" id=logoCMS>
+        <button class="navbar-toggler navbar-toggler-right bg-cms mr-3" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponse" aria-expanded="false"
+          aria-label="Toggle navigation" id="menuButton">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse nav-item width-70 bg-cms text-left" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto mr-4 mt-4">
+            <li class="nav-item"><a href="#" class="navbar-brand mr-1 js-scroll-trigger">El centre</a></li>
+            <li class="nav-item"><a href="#" class="navbar-brand mr-1">Filosofia</a></li>
+            <li class="nav-item"><a href="#" class="navbar-brand mr-1 js-scroll-trigger">Noticies</a></li>
+            <li class="nav-item"><a href="https://centremedicsabadell.net/centremedic" class="navbar-brand mr-1">Area de
+                Gestió</a></li>
+          </ul>
+        </div><!-- END navbarResponsive -->
+        <div class="pr-0 mt-0 width-15 text-left d-none d-lg-block bg-cms-light" id="solicitarVisita">
+          <p>
+            <span class="text-muted">Sol·licitar visita:</span><br /> <strong>93 726 55 00</strong>
+          </p>
+        </div><!-- END solicitarVisita -->
+      </div><!-- END container-fluid -->
+    </nav><!-- END mainNav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="secondaryNav">
+      <button class="text-cms-light bg-cms ml-2 mt-2 navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a data-toggle="collapse" data-target="#collapseEspecialitats" onclick="requestEspecialitats();">
+              <div class="nav-item">
+                <i class="text-cms-light fas fa-stethoscope fa-2x"></i><br />
+                <p>Especialitats</p>
               </div>
             </a>
-            <br>
-            <strong>93 726 55 00</strong>
-          </p>
+          </li>
+          <li class="nav-item">
+            <div class="nav-item">
+              <i class="text-cms-light fas fa-user-nurse fa-2x"></i><br />
+              <p>Quadre mèdic</p>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="nav-item">
+              <i class="text-cms-light far fa-building fa-2x"></i><br />
+              <p>Mutues</p>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-item">
+              <i class="text-cms-light fas fa-adjust fa-2x"></i><br />
+              <p>Unitat estètica</p>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="http://www.centremedicsabadell.net/">
+              <div class="nav-item">
+                <i class="text-cms-light far fa-clipboard fa-2x"></i><br />
+                <p>Sol·licitar visites</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-item">
+              <a href="#infoContacte" id="anchorContacte" class="js-scroll-trigger">
+                <i class="text-cms-light fas fa-phone fa-2x"></i><br />
+                <p>Contacte</p>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="collapse" id="collapseEspecialitats">
+      <div class="card card-body" data-is-loaded="false" id="bodyEspecialitats">
+      </div>
+    </div>
+    <div class="wrapper" id="body-wrapper">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" id="carousel-photos">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Slide">
+          </div>
+        </div>
+      </div>
+      <div id="block-collaboration-cliniques" class="bg-white">
+        <div id="collaboration-cliniques-title" class="bg-cms">
+          <p>Clíniques <strong>col·laboradores</strong></p>
+
+        </div>
+        <hr id="collaboration-cliniques-separator">
+        <div id="collaboration-cliniques-images">
+          <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png"
+            alt="Sanident Associats" class="logo_standard" style="width: 15em;">
+          <img class=" preload-me"
+            src="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg"
+            srcset="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w, https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w"
+            style="width: 15em;" alt="Clinica VisionLaser">
+          <img src="http://www.grupduran.com/wp-content/uploads/2018/12/logo-3.png" alt="Grup Duran" class="normal-logo"
+            style="width: 15em;">
         </div>
       </div>
     </div>
-    <!-- <ul>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+          </div>
+          <div class="col-sm p-a m-a">
+            <img class="bg-light br-5 p-2" src="images/logo-menu.png" alt="Logo CMS">
+          </div>
+          <div class="col-sm">
+            <p class="text-left-align" id="infoContacte">
+              <h4 class="text-muted">Informació de Contacte:</h4>
+              <br>
+              <a href="https://goo.gl/maps/K65LNsJTPHKqen846">
+                <div>
+                  Carrer de Parre Sallarès, 8
+                  <br>
+                  08201, Sabadell
+                </div>
+              </a>
+              <br>
+              <strong>93 726 55 00</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <ul>
       <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
       <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
       <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
       <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
     </ul> -->
-    <copy>&copy; <script type="text/javascript">
-        document.write(new Date().getFullYear())
-      </script> Servamed, Ricard Mallafré</copy>
-  </footer>
-
+      <copy>&copy; <script type="text/javascript">
+          document.write(new Date().getFullYear())
+        </script> Servamed, Ricard Mallafré</copy>
+    </footer>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
