@@ -35,9 +35,12 @@ hr {
   font-size: 3em;
   text-shadow: 2px 2px black;
   color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
   padding: 3px;
+  -webkit-text-decoration-style: solid;
   text-decoration-style: solid;
   vertical-align: middle;
 }
@@ -97,6 +100,7 @@ hr {
 }
 
 #mainNav #containerDiv #logoCMS {
+  -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
   margin-right: 10px;
   margin-top: 5px;
@@ -104,6 +108,7 @@ hr {
 
 #navbarResponsive {
   min-height: 4.85em;
+  -webkit-transform: translateY(-0.65em);
   transform: translateY(-0.65em);
   border-top-left-radius: 0;
   padding-right: 170px;
@@ -121,8 +126,8 @@ hr {
   z-index: -1;
   background: inherit;
   border-radius: inherit;
+  -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
-  -ms-transform: skew(10deg, 0deg);
   -webkit-transform: skew(10deg, 0deg);
   transform: skew(10deg, 0deg);
 }
@@ -146,6 +151,7 @@ hr {
 }
 
 #solicitarVisita {
+  -webkit-transform: translateY(-0.65em);
   transform: translateY(-0.65em);
   height: 4.55em;
   width: 180px;
@@ -166,8 +172,8 @@ hr {
   z-index: -1;
   background: inherit;
   border-radius: inherit;
+  -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
-  -ms-transform: skew(10deg, 0deg);
   -webkit-transform: skew(10deg, 0deg);
   transform: skew(10deg, 0deg);
 }
@@ -189,6 +195,7 @@ hr {
   text-align: center;
   padding-top: 0.2em;
   transition: all .25s;
+  -webkit-transform: translateY(0.5em);
   transform: translateY(0.5em);
 }
 
@@ -283,9 +290,12 @@ hr {
   position: relative;
   bottom: 0;
   height: 0;
+  -webkit-transform: scaleY(0);
   transform: scaleY(0);
   opacity: 0;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
 }
 
 #body-wrapper #block-collaboration-cliniques #collaboration-cliniques-images img {
@@ -294,9 +304,12 @@ hr {
 
 #body-wrapper #block-collaboration-cliniques:hover #collaboration-cliniques-images {
   height: 15.7em;
+  -webkit-transform: scaleY(1);
   transform: scaleY(1);
   opacity: 1;
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
 }
 
 footer {
@@ -336,6 +349,7 @@ footer a {
 
 footer a:hover {
   color: black;
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
@@ -376,7 +390,7 @@ footer a:hover {
   background-position: center;
 }
 
-.my-50{
+.my-250 {
   margin-top: 250px;
   margin-bottom: 250px;
 }
@@ -393,11 +407,13 @@ footer a:hover {
   background-position: center;
   background-size: cover;
   transition: all .5s ease;
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 .img-hover-zoom-container:hover div,
 .img-hover-zoom-container:focus div {
+  -webkit-transform: scale(1.4);
   transform: scale(1.4);
 }
 
