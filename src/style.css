@@ -197,7 +197,6 @@ hr {
   cursor: pointer;
 }
 
-
 #navbarSupportedContent ul li div p {
   color: #1f9bde;
   font-size: 0.9em !important;
@@ -340,6 +339,74 @@ footer a:hover {
   transform: scale(1.2);
 }
 
+.title {
+  color: #1f9bde;
+  font-size: 5em;
+  line-height: 1.2em;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 25rem;
+  height: 1px;
+  background: #1f9bde;
+  top: 100%;
+  left: 0;
+}
+
+.text {
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+#exterior {
+  height: inherit;
+  background-image: url('images/elCentre/exterior.jpg');
+}
+
+#entradaPrincipal {
+  height: inherit;
+  background-image: url('images/elCentre/entrada-principal.jpg');
+}
+
+#centreInterior {
+  height: inherit;
+  background-image: url('images/elCentre/centre-interior.jpg');
+  background-position: center;
+}
+
+.my-50{
+  margin-top: 250px;
+  margin-bottom: 250px;
+}
+
+.img-hover-zoom-container {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.img-hover-zoom-container div {
+  width: inherit;
+  height: inherit;
+  background-position: center;
+  background-size: cover;
+  transition: all .5s ease;
+  transform: scale(1.2);
+}
+
+.img-hover-zoom-container:hover div,
+.img-hover-zoom-container:focus div {
+  transform: scale(1.4);
+}
+
+/* .row{
+  border: 1px solid black;
+}
+.col{
+  border: 1px solid red;
+} */
 @media (max-width: 991px) {
   #mainTitle {
     font-size: 3em;
