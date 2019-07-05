@@ -30,6 +30,24 @@ hr {
   clear: both;
 }
 
+#home-link {
+  text-decoration: none;
+  -webkit-transform: translateY(-10px) translateX(-12px);
+  transform: translateY(-10px) translateX(-12px);
+  color: inherit;
+  background-image: url('images/logo-menu.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  width: 10%;
+  height: 80px;
+}
+
+/* #link-home::before{
+  content: "";
+  width: 200px;
+  height: 100%;
+} */
 #mainTitle {
   text-align: center;
   font-size: 3em;
@@ -115,7 +133,7 @@ hr {
   border-bottom-left-radius: 15px;
 }
 
-#navbarResponsive:after {
+#navbarResponsive::after {
   content: " ";
   position: absolute;
   display: block;
@@ -161,7 +179,7 @@ hr {
   right: 0;
 }
 
-#solicitarVisita:after {
+#solicitarVisita::after {
   content: " ";
   position: absolute;
   display: block;
@@ -194,6 +212,7 @@ hr {
   min-width: 140px;
   text-align: center;
   padding-top: 0.2em;
+  -webkit-transition: all .25s;
   transition: all .25s;
   -webkit-transform: translateY(0.5em);
   transform: translateY(0.5em);
@@ -266,6 +285,7 @@ hr {
   width: 18em;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
   z-index: 9;
   text-align: center;
@@ -294,6 +314,7 @@ hr {
   transform: scaleY(0);
   opacity: 0;
   transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
 }
@@ -308,6 +329,7 @@ hr {
   transform: scaleY(1);
   opacity: 1;
   transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
 }
@@ -317,8 +339,12 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
   clear: both;
   z-index: 10;
@@ -333,7 +359,10 @@ footer p {
 
 footer ul {
   margin-bottom: 10px;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-direction: row;
 }
 
@@ -344,6 +373,7 @@ footer ul li {
 footer a {
   font-size: 1.2em;
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -406,6 +436,7 @@ footer a:hover {
   height: inherit;
   background-position: center;
   background-size: cover;
+  -webkit-transition: all .5s ease;
   transition: all .5s ease;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
@@ -472,7 +503,10 @@ footer a:hover {
 
   footer ul {
     margin-bottom: 25px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
   }
 
