@@ -169,8 +169,8 @@ hr {
 }
 
 #solicitarVisita {
-  -webkit-transform: translateY(-0.65em);
-  transform: translateY(-0.65em);
+  -webkit-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
   height: 4.55em;
   width: 180px;
   border-bottom-left-radius: 15px;
