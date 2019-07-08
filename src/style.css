@@ -208,6 +208,13 @@ hr {
   z-index: 998;
 }
 
+#navbarSupportedContent ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 #navbarSupportedContent ul li div {
   min-width: 140px;
   text-align: center;
