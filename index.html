@@ -16,31 +16,31 @@
 
 <body id="page-top">
   <div class="page-container">
-    <div class="container-fluid content-wrapper m-0 p-0">
-      <nav class="navbar navbar-expand-lg navbar-dark shadow" id="mainNav">
-        <div class="nav container-fluid ml-0 mr-0 pr-0" id="containerDiv">
+    <div class="container-fluid content-wrapper m-0 pl-0">
+      <nav class="navbar navbar-expand-lg navbar-dark shadow main-nav">
+        <div class="nav container-fluid ml-0 mr-0 pr-0">
           <a href="index.html" class="home-link"></a>
-          <button class="navbar-toggler navbar-toggler-right bg-cms mr-3" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponse" aria-expanded="false" aria-label="Toggle navigation" id="menuButton">
+          <button class="navbar-toggler navbar-toggler-right bg-cms mr-3" type="button" data-toggle="collapse" data-target="#main-nav-responsive" aria-controls="navbarResponse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse nav-item width-70 bg-cms text-left" id="navbarResponsive">
+          <div class="collapse navbar-collapse width-70 bg-cms text-left stripe" id="main-nav-responsive">
             <ul class="navbar-nav ml-auto mr-4 mt-4">
-              <li class="nav-item">
-                <a href="el-centre.html" class="navbar-brand mr-1">El centre</a>
+              <li class="hli">
+                <a href="el-centre.html" class="mr-1">El centre</a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="navbar-brand mr-1">Filosofia</a>
+              <li class="hli">
+                <a href="#" class="mr-1">Filosofia</a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="navbar-brand mr-1 js-scroll-trigger">Noticies</a>
+              <li class="hli">
+                <a href="#" class="mr-1">Noticies</a>
               </li>
-              <li class="nav-item">
-                <a href="https://centremedicsabadell.net/centremedic" class="navbar-brand mr-1">Area de Gestió</a>
+              <li class="hli">
+                <a href="https://centremedicsabadell.net/centremedic" class="mr-1">Area de Gestió</a>
               </li>
             </ul>
           </div>
-          <!-- END navbarResponsive -->
-          <div class="pr-0 mt-0 width-15 text-left d-none d-lg-block bg-cms-light" id="solicitarVisita">
+          <!-- END main-nav-responsive -->
+          <div class="pr-0 mt-0 width-15 text-left d-none d-lg-block bg-cms-light make-appointment">
             <p>
               <span class="text-muted">Sol·licitar visita:</span><br />
               <strong>93 726 55 00</strong>
@@ -51,72 +51,71 @@
         <!-- END container-fluid -->
       </nav>
       <!-- END mainNav -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="secondaryNav">
-        <button class="text-cms-light bg-cms ml-2 mt-2 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light m-0 p-0">
+        <button class="text-cms-light bg-cms ml-2 mt-2 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse navbar-supported-content" id="navbarSupportedContent">
-          <div class="nav-item text-cms-light active" data-toggle="collapse" data-target="#collapseEspecialitats" onclick="requestEspecialitats();">
+        <div class="collapse navbar-collapse my-1 navbar-supported-content" id="navbar-supported-content">
+          <div class="nav-item p-2 text-cms-light active" data-toggle="collapse" data-target="#especialitats" onclick="requestEspecialitats();">
             <i class="fas fa-stethoscope fa-2x"></i><br />
-            <p>Especialitats</p>
+            <p class="m-0">Especialitats</p>
           </div>
-          <div class="nav-item text-cms-light">
+          <div class="nav-item p-2 text-cms-light">
             <i class="fas fa-user-nurse fa-2x"></i><br />
-            <p>Quadre mèdic</p>
+            <p class="m-0">Quadre mèdic</p>
           </div>
-          <div class="nav-item text-cms-light">
+          <div class="nav-item p-2 text-cms-light">
             <i class="far fa-building fa-2x"></i><br />
-            <p>Mútues</p>
+            <p class="m-0">Mútues</p>
           </div>
-          <div class="nav-item text-cms-light">
+          <div class="nav-item p-2 text-cms-light">
             <i class="fas fa-adjust fa-2x"></i><br />
-            <p>Unitat estètica</p>
+            <p class="m-0">Unitat estètica</p>
           </div>
-          <div class="nav-item text-cms-light">
+          <div class="nav-item p-2 text-cms-light">
             <a href="http://www.centremedicsabadell.net/" class="text-cms-light">
               <i class="far fa-clipboard fa-2x"></i><br/>
-              <p>Sol·licitar visita</p>
+              <p class="m-0">Sol·licitar visita</p>
             </a>
           </div>
-          <div class="nav-item text-cms-light">
-            <a href="#infoContacte" class="text-cms-light">
+          <div class="nav-item p-2 text-cms-light">
+            <a href="#contacte" class="text-cms-light">
               <i class="fas fa-phone fa-2x"></i><br/>
-              <p>Contacte</p>
+              <p class="m-0">Contacte</p>
             </a>
           </div>
         </div>
       </nav>
-      <div class="collapse" id="collapseEspecialitats">
-        <div class="card card-body" data-is-loaded="false" id="bodyEspecialitats"></div>
+      <div class="collapse" data-is-loaded="false" id="especialitats">
       </div>
       <div class="body-wrapper">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" id="carousel-photos">
-            <div class="carousel-item active" data-interval="10000">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="5000">
               <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="Slide"></img>
             </div>
-            <div class="carousel-item" data-interval="2500">
+            <div class="carousel-item" data-interval="5000">
               <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Slide"></img>
             </div>
-            <div class="carousel-item" data-interval="2500">
+            <div class="carousel-item" data-interval="5000">
               <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Slide"></img>
             </div>
-            <div class="carousel-item" data-interval="2500">
+            <div class="carousel-item" data-interval="5000">
               <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Slide"></img>
             </div>
-            <div class="carousel-item" data-interval="2500">
+            <div class="carousel-item" data-interval="5000">
               <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Slide"></img>
             </div>
           </div>
         </div>
-        <div id="block-collaboration-cliniques" class="bg-white">
-          <div id="collaboration-cliniques-title" class="bg-cms">
+        <div class="collab-cliniques bg-white">
+          <div class="collab-cliniques-title bg-cms">
             <p>Clíniques
               <strong>col·laboradores</strong>
             </p>
           </div>
-          <hr id="collaboration-cliniques-separator">
-          <div id="collaboration-cliniques-images">
+          <hr class="collab-cliniques-separator">
+          <div class="collab-cliniques-images">
             <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png"
             alt="Sanident Associats" class="logo_standard" style="width: 15em;"></img>
             <img class="preload-me"
@@ -129,8 +128,8 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="container">
+    <footer class="bg-cms">
+      <div class="container-fluid bg-cms m-0 p-0">
         <div class="row">
           <div class="col-lg col-md-6">First column</div>
           <div class="col-lg col-md-6">Second column</div>
@@ -138,7 +137,7 @@
             <img class="bg-light br-5 p-2" src="images/logo-menu.png" alt="Logo CMS"></img>
           </div>
           <div class="col-lg col-md-6">
-            <p class="text-left-align" id="infoContacte">
+            <p class="text-left-align" id="contacte">
               <h4 class="text">Informació de Contacte:</h4>
               <a class="color-white" href="https://goo.gl/maps/K65LNsJTPHKqen846">
               <div>
@@ -154,13 +153,13 @@
         </div>
       </div>
       <!-- <ul> <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li> </ul> -->
-      <copy>&copy;
+      <div class="bg-cms w-100">&copy;
         <script type="text/javascript">
           document.write(new Date()
             .getFullYear())
 
         </script>
-        Servamed, Ricard Mallafré</copy>
+        Servamed, Ricard Mallafré</div>
     </footer>
   </div>
   <script src="js/jquery.min.js"></script>
