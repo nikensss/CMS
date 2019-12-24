@@ -19,6 +19,12 @@ body {
   min-height: 100vh;
 }
 
+button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 5px rgb(12, 52, 98);
+  box-shadow: 0 0 0 5px rgb(12, 52, 98);
+}
+
 .color-white {
   color: white;
 }
@@ -156,7 +162,7 @@ hr {
   transition: all ease-in 0.12s;
 }
 
-.hli:not(:first-child):before {
+.hli:not(:first-child)::before {
   color: white;
   content: ' | ';
 }
@@ -240,6 +246,8 @@ hr {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border: 1px solid transparent;
+  border-radius: 0.5em;
+  width: 8rem;
 }
 
 .nav-item:hover {
@@ -314,10 +322,34 @@ hr {
     -webkit-transform 0s ease-in-out 0.2s;
   -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
     -webkit-transform 0s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
   -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
     -webkit-transform 0s ease-in-out 0.2s;
 }
@@ -335,10 +367,34 @@ hr {
     -webkit-transform 0s ease-in-out;
   -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
     -webkit-transform 0s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
   -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
   transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
+  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
+    -webkit-transform 0s ease-in-out;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
     -webkit-transform 0s ease-in-out;
 }
@@ -350,7 +406,7 @@ hr {
 
 .content-wrapper {
   min-height: 100vh;
-  padding-bottom: 10em;
+  padding-bottom: 12em;
 }
 
 footer {
@@ -359,7 +415,7 @@ footer {
   height: 10em;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 1em 0;
   display: block;
   width: 100%;
 }
@@ -368,11 +424,9 @@ footer p {
   text-transform: uppercase;
   font-size: 1.2em;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 10px;
 }
 
 footer ul {
-  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,6 +524,10 @@ footer a:hover {
   border: 1px solid red;
 } */
 @media (max-width: 992px) {
+  html {
+    font-size: 2em;
+  }
+
   #mainTitle {
     font-size: 3em;
   }
@@ -478,61 +536,54 @@ footer a:hover {
     font-size: 1.4em;
   }
 
-  #secondary-nav {
-    min-height: 0;
+  .navbar {
+    padding-left: 0;
   }
 
-  #secondaryNavResponsive {
-    width: 100%;
-    min-height: 0;
-    padding-right: 0;
-    border-top-left-radius: 0;
+  .home-link {
+    margin-left: 1rem;
+  }
+
+  .main-nav {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+
+  .stripe {
+    padding-right: 0.5em;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
+    margin-top: 0.1em;
     border-bottom-left-radius: 0;
-    background: transparent;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 
-  #navbarResponsive {
-    width: 100%;
-    min-height: 0;
-    padding-right: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    background: transparent;
-  }
-
-  #navbarResponsive ul li a {
-    color: #8bc7ea;
-    text-decoration: none;
-  }
-
-  #navbarResponsive:after {
+  .stripe::after {
     content: '';
-    position: absolute;
     display: none;
   }
 
-  #navbarResponsive ul li:not(:first-child):before {
-    color: white;
+  .hli:not(:first-child)::before {
     content: '';
+    display: none;
+  }
+
+  .make-appointment {
+    display: none;
   }
 
   .navbar-supported-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
-  /* footer ul {
-    margin-bottom        : 25px;
-    display              : -webkit-box;
-    display              : flex;
-    -webkit-box-orient   : horizontal;
-    -webkit-box-direction: normal;
-    flex-direction       : row;
+  .collab-cliniques {
+    display: none;
   }
 
-  footer ul li a {
-    font-size: 36px;
-  } */
+  .row-el-centre {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
 }
