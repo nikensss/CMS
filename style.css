@@ -1,4 +1,5 @@
 * {
+  /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
   -webkit-box-sizing: content-box;
@@ -7,7 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -386,7 +386,7 @@ footer a:hover {
 
 /* Styles el-centre.html */
 
-.my-250 {
+.big-margin-y {
   margin-top: 10em;
   margin-bottom: 10em;
 }
@@ -435,14 +435,10 @@ footer a:hover {
   background-image: url('images/elCentre/centre-interior.jpg');
 }
 
-#exterior {
-  height: inherit;
+.exterior {
   background-image: url('images/elCentre/exterior.jpg');
-}
-
-.row-el-centre {
-  margin-top: 15em;
-  margin-bottom: 15em;
+  display: block;
+  width: 110%;
 }
 
 .img-hover-zoom-container {
@@ -468,16 +464,20 @@ footer a:hover {
 /* END Styles el-centre.html */
 
 @media (max-width: 992px) {
+  *{
+    overflow-x: hidden;
+  }
+
   html {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   #mainTitle {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .intro-text {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   .navbar {
@@ -486,6 +486,8 @@ footer a:hover {
 
   .home-link {
     margin-left: 1rem;
+    margin-top: 1rem;
+    width: 8em;
   }
 
   .main-nav {
@@ -525,7 +527,6 @@ footer a:hover {
   }
 
   .navbar-supported-content {
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -533,13 +534,15 @@ footer a:hover {
     display: none;
   }
 
+
+
   /* START Styles el-centre.html */
 
   .section-grid {
     /* grid */
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10em auto auto;
+    grid-template-rows: 8em 350px auto;
     grid-template-areas:
       'title'
       'image'
@@ -548,10 +551,6 @@ footer a:hover {
 
   .section-title{
     font-size: 3em;
-  }
-
-  .row-el-centre {
-    margin-top: 3em;
-    margin-bottom: 3em;
+    border-bottom: none;
   }
 }
