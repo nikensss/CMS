@@ -127,7 +127,6 @@ hr {
 
 .stripe {
   min-height: 4.85em;
-  -webkit-transform: translateY(-0.65em);
   transform: translateY(-0.65em);
   border-top-left-radius: 0;
   padding-right: 170px;
@@ -151,7 +150,7 @@ hr {
   transform: skew(10deg, 0deg);
 }
 
-.hli {
+.main-nav-li {
   font-size: 1.25em;
   text-align: right;
   list-style-type: none;
@@ -162,21 +161,21 @@ hr {
   transition: all ease-in 0.12s;
 }
 
-.hli:not(:first-child)::before {
+.main-nav-li:not(:first-child)::before {
   color: white;
   content: ' | ';
 }
 
-.hli:hover {
+.main-nav-li:hover {
   color: black;
 }
 
-.hli a {
+.main-nav-li a {
   display: inline-block;
   color: inherit;
 }
 
-.hli a:hover {
+.main-nav-li a:hover {
   text-decoration: none;
 }
 
@@ -318,40 +317,7 @@ hr {
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   opacity: 0;
-  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out 0.2s;
 }
 
 .collab-cliniques-images img {
@@ -363,40 +329,7 @@ hr {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
   opacity: 1;
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  -webkit-transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
   transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s, -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s,
-    -webkit-transform 0s ease-in-out;
 }
 
 .page-container {
@@ -451,42 +384,60 @@ footer a:hover {
   transform: scale(1.2);
 }
 
-.title {
+/* Styles el-centre.html */
+
+.my-250 {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.section-grid {
+  /* grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'title title image image'
+    'text text image image';
+}
+
+.section-title {
+  /* grid */
+  grid-area: title;
+  /* looks */
   color: #1f9bde;
   font-size: 5em;
   line-height: 1.2em;
   border-bottom: 1px solid #1f9bde;
 }
 
-/* .title::after {
-  content   : '';
-  position  : absolute;
-  width     : 25rem;
-  height    : 1px;
-  background: #1f9bde;
-  top       : 100%;
-  left      : 0;
-} */
-
-.text {
+.section-text {
+  /* grid */
+  grid-area: text;
+  /* looks */
   font-size: 1.2em;
-  padding: 10px;
+  padding-right: 0.8em;
+  padding-top: 0.5em;
+  text-align: justify;
+}
+
+.section-image {
+  /* grid */
+  grid-area: image;
+  /* looks */
+}
+
+.entrada-principal {
+  background-image: url('images/elCentre/entrada-principal.jpg');
+}
+
+.centre-interior {
+  background-image: url('images/elCentre/centre-interior.jpg');
 }
 
 #exterior {
   height: inherit;
   background-image: url('images/elCentre/exterior.jpg');
-}
-
-#entradaPrincipal {
-  height: inherit;
-  background-image: url('images/elCentre/entrada-principal.jpg');
-}
-
-#centreInterior {
-  height: inherit;
-  background-image: url('images/elCentre/centre-interior.jpg');
-  background-position: center;
 }
 
 .row-el-centre {
@@ -505,31 +456,24 @@ footer a:hover {
   height: inherit;
   background-position: center;
   background-size: cover;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 .img-hover-zoom-container:focus div,
 .img-hover-zoom-container:hover div {
-  -webkit-transform: scale(1.4);
   transform: scale(1.4);
 }
 
-/* .row{
-  border: 1px solid black;
-}
-.col{
-  border: 1px solid red;
-} */
+/* END Styles el-centre.html */
+
 @media (max-width: 992px) {
   html {
     font-size: 2em;
   }
 
   #mainTitle {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .intro-text {
@@ -555,7 +499,6 @@ footer a:hover {
     padding-top: 0.1em;
     margin-top: 0.1em;
     border-bottom-left-radius: 0;
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
@@ -564,9 +507,17 @@ footer a:hover {
     display: none;
   }
 
-  .hli:not(:first-child)::before {
-    content: '';
-    display: none;
+  .main-nav-ul{
+    margin: 0.8em auto;
+  }
+  .main-nav-li{
+    margin: auto;
+  }
+
+  .main-nav-li:not(:first-child)::before {
+    content: '-';
+    display: block;
+    text-align: center;
   }
 
   .make-appointment {
@@ -580,6 +531,23 @@ footer a:hover {
 
   .collab-cliniques {
     display: none;
+  }
+
+  /* START Styles el-centre.html */
+
+  .section-grid {
+    /* grid */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10em auto auto;
+    grid-template-areas:
+      'title'
+      'image'
+      'text';
+  }
+
+  .section-title{
+    font-size: 3em;
   }
 
   .row-el-centre {
