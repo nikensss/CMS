@@ -407,12 +407,12 @@ footer {
 .exterior {
   background-image: url('images/elCentre/exterior.jpg');
   display: block;
-  width: 110%;
+  width: 100%;
 }
 
 .img-hover-zoom-container {
-  width: 100%;
   height: 350px;
+  overflow: hidden;
 }
 
 .img-hover-zoom-container div {
