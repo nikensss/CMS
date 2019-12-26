@@ -329,11 +329,11 @@ footer {
 .section-grid {
   /* grid */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'title title image image'
-    'text text image image';
+    'title image'
+    'text image';
 }
 
 .section-title {
