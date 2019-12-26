@@ -1,8 +1,6 @@
 * {
-  /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -11,6 +9,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   color: #222;
   font-family: 'Montserrat', sans-serif;
   padding: 0;
@@ -144,9 +143,7 @@ hr {
   z-index: -1;
   background: inherit;
   border-radius: inherit;
-  -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
-  -webkit-transform: skew(10deg, 0deg);
   transform: skew(10deg, 0deg);
 }
 
@@ -180,7 +177,6 @@ hr {
 }
 
 .make-appointment {
-  -webkit-transform: translateY(-0.1em);
   transform: translateY(-0.1em);
   height: 4.55em;
   width: 180px;
@@ -201,9 +197,7 @@ hr {
   z-index: -1;
   background: inherit;
   border-radius: inherit;
-  -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
-  -webkit-transform: skew(10deg, 0deg);
   transform: skew(10deg, 0deg);
 }
 
@@ -224,12 +218,7 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -317,7 +306,7 @@ hr {
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   opacity: 0;
-  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s, height 0.2s ease-in-out 0.2s;
+  transition: opacity 0.3s ease-in-out, transform 0s ease-in-out 0.3s, height 0.3s ease-in-out 0.3s;
 }
 
 .collab-cliniques-images img {
@@ -329,7 +318,7 @@ hr {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
   opacity: 1;
-  transition: height 0.2s ease-in-out, transform 0s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  transition: height 0.3s ease-in-out, transform 0s ease-in-out, opacity 0.3s ease-in-out 0.3s;
 }
 
 .page-container {
@@ -338,50 +327,30 @@ hr {
 }
 
 .content-wrapper {
-  min-height: 100vh;
   padding-bottom: 12em;
 }
 
 footer {
   position: absolute;
   bottom: 0;
-  height: 10em;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  display: block;
   width: 100%;
+  height: 12em;
 }
 
-footer p {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.footer-flex {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-footer ul li {
-  margin: 0 8px;
+.footer-flex-item {
+  margin: 1em;
 }
 
-footer a {
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-footer a:hover {
+.copyright {
+  text-align: center;
   color: white;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 /* Styles el-centre.html */
@@ -444,7 +413,6 @@ footer a:hover {
 .img-hover-zoom-container {
   width: 100%;
   height: 350px;
-  overflow: hidden;
 }
 
 .img-hover-zoom-container div {
@@ -464,10 +432,6 @@ footer a:hover {
 /* END Styles el-centre.html */
 
 @media (max-width: 992px) {
-  *{
-    overflow-x: hidden;
-  }
-
   html {
     font-size: 1em;
   }
@@ -487,7 +451,8 @@ footer a:hover {
   .home-link {
     margin-left: 1rem;
     margin-top: 1rem;
-    width: 8em;
+    width: 6em;
+    height: 2em;
   }
 
   .main-nav {
@@ -509,10 +474,10 @@ footer a:hover {
     display: none;
   }
 
-  .main-nav-ul{
+  .main-nav-ul {
     margin: 0.8em auto;
   }
-  .main-nav-li{
+  .main-nav-li {
     margin: auto;
   }
 
@@ -530,11 +495,11 @@ footer a:hover {
     flex-wrap: wrap;
   }
 
+  /* START Styles index.html */
+
   .collab-cliniques {
     display: none;
   }
-
-
 
   /* START Styles el-centre.html */
 
@@ -549,8 +514,9 @@ footer a:hover {
       'text';
   }
 
-  .section-title{
+  .section-title {
     font-size: 3em;
     border-bottom: none;
   }
+
 }
