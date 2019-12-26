@@ -14,13 +14,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #d2d2d2;
-  min-height: 100vh;
+  background-color: white;
 }
 
 button:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 5px rgb(12, 52, 98);
   box-shadow: 0 0 0 5px rgb(12, 52, 98);
 }
 
@@ -44,7 +42,6 @@ hr {
 
 .home-link {
   text-decoration: none;
-  -webkit-transform: translateY(-10px) translateX(-12px);
   transform: translateY(-10px) translateX(-12px);
   color: inherit;
   background-image: url('images/logo-menu.png');
@@ -55,49 +52,18 @@ hr {
   height: 80px;
 }
 
-#mainTitle {
-  text-align: center;
-  font-size: 3em;
-  text-shadow: 2px 2px black;
-  color: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  padding: 3px;
-  -webkit-text-decoration-style: solid;
-  text-decoration-style: solid;
-  vertical-align: middle;
-}
-
 .intro-text {
   color: black;
   font-size: 2em;
   text-align: center;
 }
 
-.width-10 {
-  width: 10%;
-}
-
 .width-15 {
   width: 15%;
 }
 
-.width-20 {
-  width: 20%;
-}
-
 .width-70 {
   width: 70%;
-}
-
-.width-75 {
-  width: 75%;
-}
-
-.width-80 {
-  width: 80%;
 }
 
 .bg-cms {
@@ -154,7 +120,6 @@ hr {
   display: inline;
   padding: 0;
   color: white;
-  -webkit-transition: all ease-in 0.12s;
   transition: all ease-in 0.12s;
 }
 
@@ -223,15 +188,10 @@ hr {
 }
 
 .nav-item {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   padding: 0.2em 0.5em 0;
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border: 1px solid transparent;
   border-radius: 0.5em;
@@ -240,7 +200,6 @@ hr {
 
 .nav-item:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 15px grey;
   box-shadow: 0 0 15px grey;
   background-color: white;
 }
@@ -268,6 +227,7 @@ hr {
 
 .body-wrapper {
   position: relative;
+  height: 100%;
   z-index: 9;
 }
 
@@ -278,7 +238,6 @@ hr {
   width: 18em;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
   z-index: 9;
   text-align: center;
@@ -321,31 +280,34 @@ hr {
   transition: height 0.3s ease-in-out, transform 0s ease-in-out, opacity 0.3s ease-in-out 0.3s;
 }
 
+.collab-cliniques-md {
+  display: none;
+}
+
 .page-container {
   position: relative;
   min-height: 100vh;
 }
 
 .content-wrapper {
-  padding-bottom: 12em;
+  padding-bottom: 12rem;
 }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 12em;
+  height: 12rem;
 }
 
 .footer-flex {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-  align-items: center;
 }
 
 .footer-flex-item {
-  margin: 1em;
+  margin: 1em 3em;
 }
 
 .copyright {
@@ -354,6 +316,10 @@ footer {
 }
 
 /* Styles el-centre.html */
+.big-margin-x {
+  margin-left: 10em;
+  margin-right: 10em;
+}
 
 .big-margin-y {
   margin-top: 10em;
@@ -432,14 +398,6 @@ footer {
 /* END Styles el-centre.html */
 
 @media (max-width: 992px) {
-  html {
-    font-size: 1em;
-  }
-
-  #mainTitle {
-    font-size: 1em;
-  }
-
   .intro-text {
     font-size: 1.2em;
   }
@@ -495,6 +453,21 @@ footer {
     flex-wrap: wrap;
   }
 
+  .collab-cliniques-md{
+    display: block;
+    text-align: center;
+  }
+
+  .collab-cliniques-md-title{
+    padding: 0.6rem 0;
+  }
+  .collab-cliniques-md-images {
+    background-color: white;
+    padding-bottom: 2rem;
+  }
+  .collab-cliniques-md-images > * {
+    padding: 0.8rem 0;
+  }
   /* START Styles index.html */
 
   .collab-cliniques {
@@ -502,7 +475,15 @@ footer {
   }
 
   /* START Styles el-centre.html */
+  .big-margin-x {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
+  .big-margin-y {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
   .section-grid {
     /* grid */
     display: grid;
@@ -519,4 +500,22 @@ footer {
     border-bottom: none;
   }
 
+  .section-title,
+  .section-text {
+    padding-left: 0.25rem;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+
+  .footer-flex-item {
+    width: 50%;
+    text-align: center;
+    margin: 1em auto;
+  }
+
+  .footer-flex-item img {
+    width: 80%;
+  }
 }
