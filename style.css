@@ -406,7 +406,7 @@ footer {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .intro-text {
     font-size: 1.2em;
   }
@@ -478,7 +478,10 @@ footer {
   }
 
   .collab-cliniques-md-images > * {
-    padding: 0.8rem 0;
+    padding     : 0.8rem 0;
+    display     : block;
+    margin-left : auto;
+    margin-right: auto;
   }
   /* START Styles index.html */
 
