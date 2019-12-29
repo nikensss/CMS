@@ -1,162 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Cabin:700|Lora:400,400i,700" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <title>Centre Mèdic Sabadell</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Cabin:700|Lora:400,400i,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Centre Mèdic Sabadell</title>
+  </head>
 
-<body id="page-top">
-  <div class="page-container">
-    <div class="content-wrapper m-0 px-0">
-      <nav class=" nav container-fluid ml-0 mr-0 pr-0 navbar navbar-expand-lg navbar-dark shadow main-nav">
-        <a href="index.html" class="home-link"></a>
-        <button class="navbar-toggler navbar-toggler-right bg-cms mr-3" type="button" data-toggle="collapse" data-target="#main-nav-responsive" aria-controls="navbarResponse" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse width-70 bg-cms text-left stripe" id="main-nav-responsive">
-          <ul class="navbar-nav ml-auto mr-md-auto mr-lg-4 mt-lg-4 main-nav-ul">
-            <li class="main-nav-li">
-              <a href="el-centre.html" class="mr-1">El centre</a>
-            </li>
-            <li class="main-nav-li">
-              <a href="#" class="mr-1">Filosofia</a>
-            </li>
-            <li class="main-nav-li">
-              <a href="#" class="mr-1">Noticies</a>
-            </li>
-            <li class="main-nav-li">
-              <a href="https://centremedicsabadell.net/centremedic" class="mr-1">Area de Gestió</a>
-            </li>
-          </ul>
-        </div>
-        <!-- END main-nav-responsive -->
-        <div class="pr-0 mt-0 width-15 text-left d-none d-lg-block bg-cms-light make-appointment">
-          <p>
-            <span class="text-muted">Sol·licitar visita:</span><br />
-            <strong>93 726 55 00</strong>
-          </p>
-        </div>
-        <!-- END solicitarVisita -->
-        <!-- END container-fluid -->
-      </nav>
-      <!-- END mainNav -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light m-0 p-lg-0 py-md-1">
-        <button class="text-cms-light bg-cms ml-2 my-1 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse my-1 navbar-supported-content" id="navbar-supported-content">
-          <div class="nav-item p-2 text-cms-light active" data-toggle="collapse" data-target="#especialitats" onclick="requestEspecialitats();">
-            <i class="fas fa-stethoscope fa-2x"></i><br />
-            <p class="m-0">Especialitats</p>
+  <body id="page-top">
+    <div class="page-container">
+      <div class="content-wrapper m-0 px-0">
+        <nav class=" nav container-fluid ml-0 mr-0 pr-0 navbar navbar-expand-lg navbar-dark shadow main-nav">
+          <a href="index.html" class="home-link"></a>
+          <button class="navbar-toggler navbar-toggler-right bg-cms mr-3" type="button" data-toggle="collapse" data-target="#main-nav-responsive" aria-controls="navbarResponse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse width-70 bg-cms text-left stripe" id="main-nav-responsive">
+            <ul class="navbar-nav ml-auto mr-md-auto mr-lg-4 mt-lg-4 main-nav-ul">
+              <li class="main-nav-li">
+                <a href="el-centre.html" class="mr-1">El centre</a>
+              </li>
+              <li class="main-nav-li">
+                <a href="#" class="mr-1">Filosofia</a>
+              </li>
+              <li class="main-nav-li">
+                <a href="#" class="mr-1">Noticies</a>
+              </li>
+              <li class="main-nav-li">
+                <a href="https://centremedicsabadell.net/centremedic" class="mr-1">Area de Gestió</a>
+              </li>
+            </ul>
           </div>
-          <div class="nav-item p-2 text-cms-light">
-            <i class="fas fa-user-nurse fa-2x"></i><br />
-            <p class="m-0">Quadre mèdic</p>
+          <!-- END main-nav-responsive -->
+          <div class="pr-0 mt-0 width-15 text-left d-none d-lg-block bg-cms-light make-appointment">
+            <p>
+              <span class="text-muted">Sol·licitar visita:</span><br/>
+              <strong>93 726 55 00</strong>
+            </p>
           </div>
-          <div class="nav-item p-2 text-cms-light">
-            <i class="far fa-building fa-2x"></i><br />
-            <p class="m-0">Mútues</p>
-          </div>
-          <div class="nav-item p-2 text-cms-light">
-            <i class="fas fa-adjust fa-2x"></i><br />
-            <p class="m-0">Unitat estètica</p>
-          </div>
-          <div class="nav-item p-2 text-cms-light">
-            <a href="http://www.centremedicsabadell.net/" class="text-cms-light">
+          <!-- END solicitarVisita -->
+          <!-- END container-fluid -->
+        </nav>
+        <!-- END mainNav -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light m-0 p-lg-0 py-md-1">
+          <button class="text-cms-light bg-cms ml-2 my-1 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse my-1 navbar-supported-content" id="navbar-supported-content">
+            <div class="nav-item p-2 text-cms-light active" data-toggle="collapse" data-target="#especialitats" onclick="requestEspecialitats();">
+              <i class="fas fa-stethoscope fa-2x"></i><br/>
+              <p class="m-0">Especialitats</p>
+            </div>
+            <div class="nav-item p-2 text-cms-light">
+              <i class="fas fa-user-nurse fa-2x"></i><br/>
+              <p class="m-0">Quadre mèdic</p>
+            </div>
+            <div class="nav-item p-2 text-cms-light">
+              <i class="far fa-building fa-2x"></i><br/>
+              <p class="m-0">Mútues</p>
+            </div>
+            <div class="nav-item p-2 text-cms-light">
+              <i class="fas fa-adjust fa-2x"></i><br/>
+              <p class="m-0">Unitat estètica</p>
+            </div>
+            <div class="nav-item p-2 text-cms-light">
+              <a href="http://www.centremedicsabadell.net/" class="text-cms-light">
                 <i class="far fa-clipboard fa-2x"></i><br/>
                 <p class="m-0">Sol·licitar visita</p>
               </a>
-          </div>
-          <div class="nav-item p-2 text-cms-light">
-            <a href="#contacte" class="text-cms-light">
+            </div>
+            <div class="nav-item p-2 text-cms-light">
+              <a href="#contacte" class="text-cms-light">
                 <i class="fas fa-phone fa-2x"></i><br/>
                 <p class="m-0">Contacte</p>
               </a>
-          </div>
-        </div>
-      </nav>
-      <div class="collapse" data-is-loaded="false" id="especialitats"></div>
-      <div class="body-wrapper">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="5000">
-              <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="Slide"></img>
-            </div>
-            <div class="carousel-item" data-interval="5000">
-              <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Slide"></img>
-            </div>
-            <div class="carousel-item" data-interval="5000">
-              <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Slide"></img>
-            </div>
-            <div class="carousel-item" data-interval="5000">
-              <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Slide"></img>
-            </div>
-            <div class="carousel-item" data-interval="5000">
-              <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Slide"></img>
             </div>
           </div>
-        </div>
-        <div class="collab-cliniques bg-white">
-          <div class="collab-cliniques-title bg-cms">
-            <p>Clíniques
+        </nav>
+        <div class="collapse" data-is-loaded="false" id="especialitats"></div>
+        <div class="body-wrapper">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                <img class="d-block w-100" src="images/carousel/DSC_0051.jpg" alt="Slide"></img>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img class="d-block w-100" src="images/carousel/DSC_0063.jpg" alt="Slide"></img>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img class="d-block w-100" src="images/carousel/entrada.jpg" alt="Slide"></img>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img class="d-block w-100" src="images/carousel/facana.jpg" alt="Slide"></img>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img class="d-block w-100" src="images/carousel/intervencions.jpg" alt="Slide"></img>
+              </div>
+            </div>
+          </div>
+          <div class="collab-cliniques bg-white">
+            <div class="collab-cliniques-title bg-cms">
+              <p>Clíniques
+                <strong>col·laboradores</strong>
+              </p>
+            </div>
+            <hr class="collab-cliniques-separator">
+            <div class="collab-cliniques-images">
+              <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png" alt="Sanident Associats" class="logo_standard" style="width: 15em;"></img>
+              <img class="preload-me" src="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg" srcset="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w, https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w" style="width: 15em;" alt="Clinica VisionLaser"></img>
+              <img src="http://www.grupduran.com/wp-content/uploads/2018/12/logo-3.png" alt="Grup Duran" class="normal-logo" style="width: 15em;"></img>
+            </div>
+          </div>
+          <div class="collab-cliniques-md">
+            <div class="collab-cliniques-md-title bg-cms">
+              Clíniques
               <strong>col·laboradores</strong>
-            </p>
-          </div>
-          <hr class="collab-cliniques-separator">
-          <div class="collab-cliniques-images">
-            <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png" alt="Sanident Associats" class="logo_standard" style="width: 15em;"></img>
-            <img class="preload-me" src="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg" srcset="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w, https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w" style="width: 15em;" alt="Clinica VisionLaser"></img>
-            <img src="http://www.grupduran.com/wp-content/uploads/2018/12/logo-3.png" alt="Grup Duran" class="normal-logo" style="width: 15em;"></img>
-          </div>
-        </div>
-        <div class="collab-cliniques-md">
-          <div class="collab-cliniques-md-title bg-cms">
-            Clíniques <strong>col·laboradores</strong>
-          </div>
-          <div class="collab-cliniques-md-images">
-            <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png" alt="Sanident Associats" class="logo_standard" style="width: 15em;"></img>
-            <img class="preload-me" src="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg" srcset="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w, https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w" style="width: 15em;" alt="Clinica VisionLaser"></img>
-            <img src="http://www.grupduran.com/wp-content/uploads/2018/12/logo-3.png" alt="Grup Duran" class="normal-logo" style="width: 15em;"></img>
+            </div>
+            <div class="collab-cliniques-md-images">
+              <img src="http://www.sanident.net/wp-content/uploads/Logo-Sanident-Dra-Vanessa-01.png" alt="Sanident Associats" class="logo_standard" style="width: 15em;"></img>
+              <img class="preload-me" src="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg" srcset="https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w, https://www.clinicavisionlaser.es/wp-content/uploads/logo-horizontal-CVL-copia.jpg 400w" style="width: 15em;" alt="Clinica VisionLaser"></img>
+              <img src="http://www.grupduran.com/wp-content/uploads/2018/12/logo-3.png" alt="Grup Duran" class="normal-logo" style="width: 15em;"></img>
+            </div>
           </div>
         </div>
       </div>
+      <footer class="bg-cms">
+        <div class="footer-flex">
+          <div class="footer-flex-item">
+            <img class="bg-light br-5 p-2" src="images/logo-menu.png" alt="Logo CMS"></img>
+          </div>
+          <div class="footer-flex-item" id="contacte">
+            <h4 class="text">Contacte:</h4>
+            <a class="color-white" href="https://goo.gl/maps/K65LNsJTPHKqen846">
+              Carrer de Parre Sallarès, 8
+              <br>
+              08201, Sabadell
+            </a>
+            <p>93 726 55 00</p>
+          </div>
+        </div>
+        <!-- <ul> <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li> </ul> -->
+        <div class="bg-cms copyright">&copy;
+          <script type="text/javascript">
+            document.write(new Date().getFullYear());
+          </script>
+          Servamed
+        </div>
+      </footer>
     </div>
-    <footer class="bg-cms">
-      <div class="footer-flex">
-        <div class="footer-flex-item">
-          <img class="bg-light br-5 p-2" src="images/logo-menu.png" alt="Logo CMS"></img>
-        </div>
-        <div class="footer-flex-item" id="contacte">
-          <h4 class="text">Contacte:</h4>
-          <a class="color-white" href="https://goo.gl/maps/K65LNsJTPHKqen846"> Carrer de Parre Sallarès, 8 <br> 08201, Sabadell </a>
-          <p>93 726 55 00</p>
-        </div>
-      </div>
-      <!-- <ul> <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li> <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li> </ul> -->
-      <div class="bg-cms copyright">&copy;
-        <script type="text/javascript">
-          document.write(new Date().getFullYear());
-
-        </script>
-        Servamed
-      </div>
-    </footer>
-  </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
 
 </html>

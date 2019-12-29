@@ -22,7 +22,7 @@ function soap(username, password) {
   //FOR TESTING: display results in an alert box once the response is received
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4) {
-      alert(xmlhttp.responseText);
+      console.log(xmlhttp.responseText);
     }
   };
 
@@ -42,7 +42,7 @@ function soap(username, password) {
 
 function requestEspecialitats() {
   console.log('Requesting soap...');
-  soap('','');
+  soap('', '');
   // const collapseEspecialitats = document.getElementById('especialitats');
 
   // if (!collapseEspecialitats.classList.contains('show')) {
